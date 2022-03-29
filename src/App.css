@@ -1,38 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
 .App {
+  /* text-align: center; */
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+
+.pokedex{
+
+  font-family: 'Permanent Marker', cursive;  text-align: center;
+  font-size: 35px;
+  color: tomato;
+
+}
+
+.welcome{
+  font-size: 25px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.welcome>span{
+  font-weight: bold;
+  text-transform: capitalize;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.containerCard{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;  
+
 }
 
-.App-link {
-  color: #61dafb;
+a{
+text-decoration: none;
+}
+.cardPokemon{
+  color: black;
+  margin: 30px;
+  text-align: center;
+  padding: 30px;
+  width: 300px;
+  /* height: 200px; */
+  /* margin: 0 auto; */
+  background-color: antiquewhite;
+  border-radius: 30px;
+  position: relative;
+  box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.3
+  );
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.cardPokemon>.id {
+  position: absolute;
+  right: 0;
+  /* text-align: center; */
+  padding-top: 4px;
+  width: 60px;
+  height: 25px;
+  /* padding: 20px; */
+  margin: 50x 0;
+  background-color: rgb(202, 54, 24);
+  border-radius: 50px;
+  color: whitesmoke;
+}
+
+.cardPokemon>.name {
+font-weight: bold;
+}
+
+
+
+.cardPokemon>.section {
+line-height: 30px;
+}
+
+@media(min-width: 768px){
+  .containerCard{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  
   }
-  to {
-    transform: rotate(360deg);
+
+  @media(min-width: 1024px){
+    .containerCard{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+    
+    }
+    
+  
   }
 }
