@@ -9,17 +9,46 @@ import {useNavigate} from 'react-router-dom'
 const Pokedex = () => {
     const [Pokemons, setPokemons]= useState(null) //para almacenar los pokemons consumidos
     const [types, setTypes]= useState([]);
+    const [page, setPage] =useState(1);
 
-
+    //para navegar a podexData
     const Navigate = useNavigate();
 
 
     const[NameOrId, setNameOrId] = useState("")
     // console.log(Pokemons)
+
+    
     const userName = useSelector(state => state.userName)
 
+
+
+
+    
+            //* Codigo para la paginacion 
+    
+            const items= 6;
+            const lastIndex = items *page;
+            const firstIndex = lastIndex - items;
+
+            const pagination = Pokemons?.slice(firstIndex,lastIndex);
+
+            const totalPage = Math.ceil(Pokemons?.length/items)
+            // console.log(`paginas :${totalPage}`)
+
+            let PageNum =[];
+
+            for(let i=1; i<totalPage; i++){
+                PageNum.push(i)
+            }
+
+
+
+    
+    
+
     useEffect(()=>{
-        axios.get("https://pokeapi.co/api/v2/pokemon?limit=20&offset=0")
+        axios.get("https://pokeapi.co/api/v2/pokemon?limit=1000&offset=0")
         .then(r => {
                     setPokemons(r.data.results)
                     console.log("POKemons:")
@@ -33,10 +62,9 @@ const Pokedex = () => {
     },[])
 
 
-    console.log(types)
+    // console.log(types)
 
     const Submit=(e)=>{
-
         e.preventDefault();
         // console.log(NameOrId);
         Navigate(`/pokedex/${NameOrId}`)
@@ -49,7 +77,9 @@ const Pokedex = () => {
         let urlTypes = e.target.value
         axios.get(urlTypes)
         .then(r => {
-            console.log("types..>");
+            console.log("type...>");
+
+            console.log(r.data?.pokemon);
             setPokemons(r.data?.pokemon);
         
             // r.data.pokemon.map(pokemon => console.log(pokemon.pokemon.url))
@@ -57,6 +87,8 @@ const Pokedex = () => {
         // console.log(e.target.value)
 
     }
+
+    console.log(page);
 
     return (
         <>
@@ -90,8 +122,25 @@ const Pokedex = () => {
                     <ul className='containerCard'>
 
                     
+                        <button onClick={()=>{setPage(page-1)}}
+                                disabled={page<=1}>
+                        Back</button>
+        
+                        <div>
+                            {
+                                PageNum.map( num =>(
+                                    <button onClick={()=> setPage(num)} key={num}>{num} </button>
+                                    ))
+                            }
+                        </div>
+        
+                        <button onClick={()=>setPage(page+1)}
+                                disabled={page >=totalPage}>Next</button>
                 {
-                    Pokemons?.map(pokemon =>(
+
+
+                    
+                    pagination?.map(pokemon =>(
                         
                     <CarsdPokemon key={pokemon.url?pokemon.url:pokemon.pokemon.url} pokemonUrl={pokemon.url?pokemon.url:pokemon.pokemon.url}/>
                         
@@ -100,6 +149,10 @@ const Pokedex = () => {
                 }
 
                         </ul>
+
+
+
+
         </>
     );
 };
