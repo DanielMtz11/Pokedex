@@ -18,7 +18,7 @@ const PokedexData = () => {
     },[Name])
 
 
-        console.log(pokemon)
+        // console.log(pokemon)
 
 
 
@@ -28,7 +28,7 @@ const PokedexData = () => {
                 
                     <p>{pokemon.name}</p>
                         <img src={pokemon.sprites?.other.dream_world.front_default} alt="" />
-                   
+
                     <section>abilities:
                     <p> {pokemon.abilities?.[0].ability.name}</p>
                     <p>{pokemon.abilities?.[1].ability.name}</p>

@@ -15,7 +15,7 @@ const CarsdPokemon = ({pokemonUrl}) => {
                     })
 
     },[pokemonUrl])
-    console.log(Pokemon)   
+    // console.log(Pokemon)   
 
 
     
@@ -29,7 +29,7 @@ const CarsdPokemon = ({pokemonUrl}) => {
                 <p className='id'>{Pokemon.id}</p>
                 <h2 className='name'>{Pokemon.name}</h2>
                 <p>type: {Pokemon.types?.[0].type?.name}</p>
-                <img className='img' src={Pokemon.sprites?.front_default} alt="" />
+                <img className='img' src={Pokemon?.sprites?.front_default} alt="" />
 
                 <section className='section'>
                         <p>attack:
