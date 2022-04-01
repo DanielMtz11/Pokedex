@@ -2,7 +2,9 @@ import React from 'react';
 import { useState } from 'react';
 import {useDispatch} from 'react-redux';
 import {useNavigate} from 'react-router-dom';
-import img from '../img/logo.png';
+// import img from '../img/logo.png';
+
+import podedeximg from '../img/pokedex.png'
 // import search from '../img/search-icon.png'
 
 import pokeball from '../img/pokeball.png'
@@ -30,11 +32,11 @@ const Login = () => {
 
 
     return (
-        <div>
+        <div className='container-login'>
                 {/* <h2>Login</h2> */}
-                <section className='container-img'>
-                <img className="logo"  src={img} alt="Pokemon"></img>
-                </section>
+                <f className='container-img'>
+                <img className="logo"  src={podedeximg} alt="Pokemon"></img>
+                </f>
 
 
                 <form onSubmit={submit} className="search-container">
@@ -50,20 +52,14 @@ const Login = () => {
                 </form>
 
 
+                <footer className='footer'>
+                    <div className='red'>
 
+                    </div>
 
-                {/* <form onSubmit={submit}>
-                    <label htmlFor="InputName">What is your name ?</label>
-                    <input 
-                        type="text" 
-                        id='InputName'
-                        onChange={e=>setUserName(e.target.value)}
-                        value={userName}
-                        required/>
+                    <div className='black'></div>
+                </footer>
 
-                
-                    <button>go</button>
-                </form> */}
         </div>
     );
 };

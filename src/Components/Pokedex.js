@@ -130,11 +130,6 @@ const Pokedex = () => {
     const Types=[]
         types.map(type =>(
             Types.push(type.name)
-
-            
-            
-            
-            
             
             ))
             // console.log(Types)
