@@ -40,11 +40,13 @@ const Login = () => {
                 <img className="logo"  src={podedeximg} alt="Pokemon"></img>
                 </f>
 
+                <h2>Hello Trainer !</h2>
+                <p>Give me your name to start</p>
 
                 <form onSubmit={submit} className="search-container">
                     <input type="text"
                             id="search-bar" 
-                            placeholder="What`s your name?"
+                            placeholder="Your name..."
                             onChange={e=>setUserName(e.target.value)}
                             value={userName}
                             required/>
