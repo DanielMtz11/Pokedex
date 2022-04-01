@@ -111,16 +111,37 @@ input#search-bar {
 
 
 .footer>.red{
-  height: 60px;  
+  height: 100px;  
   background-color: #DD1A1A;
   
   }
 
 .footer>.black{
-    height: 40px;  
+    height: 60px;  
     background-color: black;
     
     }
+
+    .elipse {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      height: 120px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .elipse2 {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      height: 111px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+
 
 
 

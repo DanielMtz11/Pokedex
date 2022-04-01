@@ -3,6 +3,8 @@ import { useState } from 'react';
 import {useDispatch} from 'react-redux';
 import {useNavigate} from 'react-router-dom';
 // import img from '../img/logo.png';
+import elipse from '../img/Ellipse.png'
+import elipse2 from '../img/Ellipse2.png'
 
 import podedeximg from '../img/pokedex.png'
 // import search from '../img/search-icon.png'
@@ -59,6 +61,15 @@ const Login = () => {
 
                     <div className='black'></div>
                 </section>
+
+                <div  className='elipse'>
+                    <img src={elipse} alt="" />
+                </div>
+
+                <div  className='elipse2'>
+                    <img src={elipse2} alt="" />
+                </div>
+
 
         </div>
     );
