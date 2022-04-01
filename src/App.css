@@ -14,15 +14,11 @@
 }
 
 
-.container-img>img {
-    width: 100%;
-
-}
 
 .search-container {
-	width: 250px;
+	width: auto;
 	display: block;
-	margin: 0 auto;
+	margin: 0 60px;
 }
 
 input#search-bar{
@@ -67,9 +63,7 @@ input#search-bar{
   
 }
 
-.container-img{
 
-}
 
 
 .pokedex{
