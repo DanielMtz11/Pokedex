@@ -9,13 +9,25 @@ import Pokedex from './Components/Pokedex';
 import PokedexData from './Components/PokedexData';
 // import PokedexInfo from './Components/PokedexInfo';
 import ProtectedRoutes from './Components/ProtectedRoutes';
+import {useSelector} from 'react-redux'
+
 
 
 function App() {
+
+
+  const isDark = useSelector(state => state.isDark)
+
+
+  const style ={
+      background: isDark? ("black"):("white")
+  }
+
+  console.log(isDark)
   return (
 
     <HashRouter>
-    <div className="App">
+    <div className="App" style={style}>
 
       <Routes>
         <Route path='/' element={<Login/>}/>

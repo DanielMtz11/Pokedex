@@ -2,24 +2,34 @@ import React from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
 import { useState } from 'react';
-import {useSelector} from 'react-redux'
+import {useSelector, useDispatch} from 'react-redux'
 import CarsdPokemon from './CarsdPokemon';
 import {useNavigate} from 'react-router-dom'
+
 
 const Pokedex = () => {
     const [Pokemons, setPokemons]= useState(null) //para almacenar los pokemons consumidos
     const [types, setTypes]= useState([]);
     const [page, setPage] =useState(1);
-
+    const [iteration, setIteration] = useState(1);
+    
     //para navegar a podexData
     const Navigate = useNavigate();
 
 
-    const[NameOrId, setNameOrId] = useState("")
+    const[NameOrId, setNameOrId] = useState("");
     // console.log(Pokemons)
 
+
+    //desde la store...
     
-    const userName = useSelector(state => state.userName)
+    const userName = useSelector(state => state.userName);
+
+    const isDark = useSelector(state => state.isDark);
+
+    const dispatch = useDispatch();//useDispatch sirve para ejecutar las acciones que se encuentran en el swicht de redux
+
+
 
 
 
@@ -27,20 +37,42 @@ const Pokedex = () => {
     
             //* Codigo para la paginacion 
     
+
+            //Mostraremos solo 6 items por pagina
             const items= 6;
+
+            //lastIndex determina el ultimo indice de cada pagina 
+            //firstIndex determina el primer indice de cada pagina
             const lastIndex = items *page;
             const firstIndex = lastIndex - items;
 
+            //la paginacion consiste en realizar un slice al array pokemos, pasando como parametros los indices determinados
             const pagination = Pokemons?.slice(firstIndex,lastIndex);
 
+            //el total de paginas se determina dividiendo el array de pokemons sobre los items a mostrar.
+            // y se redondea al numero mas alto para evitar decimales:  255/6 = 42.5 = 43
             const totalPage = Math.ceil(Pokemons?.length/items)
             // console.log(`paginas :${totalPage}`)
 
+            //llenamos PageNum por cada pagina dentro de totalPage
             let PageNum =[];
-
             for(let i=1; i<totalPage; i++){
                 PageNum.push(i)
             }
+
+            const pagestoShow = 10;
+            const lastPage = pagestoShow*iteration;
+            const firstPage = lastPage - pagestoShow;
+            
+            const showPage = PageNum?.slice(firstPage,lastPage);
+            const totalShowPage = Math.ceil(PageNum?.length/pagestoShow);
+            // console.log(`total :${totalShowPage}`);
+            // console.log(`showpage: ${showPage}`);
+
+            // console.log(`PageNum: ${PageNum}`)
+            // console.log(`i: ${iteration}`);
+
+
 
 
 
@@ -51,8 +83,8 @@ const Pokedex = () => {
         axios.get("https://pokeapi.co/api/v2/pokemon?limit=1000&offset=0")
         .then(r => {
                     setPokemons(r.data.results)
-                    console.log("POKemons:")
-                    console.log(r.data.results)
+                    // console.log("POKemons:")
+                    // console.log(r.data.results)
                     })
 
 
@@ -62,7 +94,6 @@ const Pokedex = () => {
     },[])
 
 
-    // console.log(types)
 
     const Submit=(e)=>{
         e.preventDefault();
@@ -77,9 +108,9 @@ const Pokedex = () => {
         let urlTypes = e.target.value
         axios.get(urlTypes)
         .then(r => {
-            console.log("type...>");
+            // console.log("type...>");
 
-            console.log(r.data?.pokemon);
+            // console.log(r.data?.pokemon);
             setPokemons(r.data?.pokemon);
         
             // r.data.pokemon.map(pokemon => console.log(pokemon.pokemon.url))
@@ -88,11 +119,44 @@ const Pokedex = () => {
 
     }
 
-    console.log(page);
+    // console.log(page);
+
+    // console.log( `types from pokedex: `)
+    // console.log(types)
+
+
+   const handleTypes=()=>{
+
+    const Types=[]
+        types.map(type =>(
+            Types.push(type.name)
+
+            
+            
+            
+            
+            
+            ))
+            // console.log(Types)
+
+                
+                switch(Types){
+                    case "normal":
+                        return console.log("normal");
+
+
+                }
+
+}
+
+
+    handleTypes();
+
 
     return (
         <>
                 <p className='pokedex'>Pokedex</p>
+                <button onClick={()=>dispatch({type: "SET_ISDARK"})}> {isDark? "white": "black"}</button>
                 <p className='welcome'>welcome <span>{userName}</span> </p>
 
                 <div>
@@ -121,34 +185,52 @@ const Pokedex = () => {
                 
                     <ul className='containerCard'>
 
+                        <button onClick={()=>setIteration(iteration-1)}
+                                disabled={ iteration<=1}>
+                                «
+                        </button>
                     
-                        <button onClick={()=>{setPage(page-1)}}
-                                disabled={page<=1}>
-                        Back</button>
-        
                         <div>
                             {
-                                PageNum.map( num =>(
+                                showPage.map( num =>(
                                     <button onClick={()=> setPage(num)} key={num}>{num} </button>
                                     ))
-                            }
+                                }
                         </div>
+                                
+                        <button onClick={()=> setIteration(iteration+1)}
+                                disabled ={iteration >=totalShowPage }>
+                                »
+                        </button>
         
-                        <button onClick={()=>setPage(page+1)}
-                                disabled={page >=totalPage}>Next</button>
+                       
                 {
 
 
                     
                     pagination?.map(pokemon =>(
                         
-                    <CarsdPokemon key={pokemon.url?pokemon.url:pokemon.pokemon.url} pokemonUrl={pokemon.url?pokemon.url:pokemon.pokemon.url}/>
+                    <CarsdPokemon key={pokemon.url?pokemon.url:pokemon.pokemon.url} pokemonUrl={pokemon.url?pokemon.url:pokemon.pokemon.url}  />
                         
                 
                     ))
                 }
 
+
+
                         </ul>
+
+                        
+                        <button onClick={()=>{setPage(page-1)}}
+                                disabled={page<=1}>
+                                Back
+                        </button>
+        
+
+                        <button onClick={()=>setPage(page+1)}
+                                disabled={page >=totalPage}>
+                                Next
+                        </button>
 
 
 

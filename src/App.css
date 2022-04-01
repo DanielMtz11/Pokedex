@@ -2,12 +2,72 @@
 
 .App {
   /* text-align: center; */
+  background-color: rgb(7, 11, 51);
+
 }
+.container-img {
+	width: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px 0px;
+}
+
+
+.container-img>img {
+    width: 100%;
+
+}
+
+.search-container {
+	width: 250px;
+	display: block;
+	margin: 0 auto;
+}
+
+input#search-bar{
+  margin: 0 auto;
+  width: 100%;
+  height: 45px;
+  padding: 0 20px;
+  font-size: 1rem;
+  /* border: 1px solid #D0CFCE; */
+  outline: none;
+
+  }
+
+.search-icon {
+	position: relative;
+	float: right;
+	width: 54px;
+	height: 45px;
+	top: -45px;
+	right: 0px;
+}
+.search-icon > img {
+	position: relative;
+	float: right;
+	width: 40px;
+	height: 40px;
+	/* top: -62px; */
+	right: 5px;
+}
+
+
+
+
+
+
+
 
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  
+}
+
+.container-img{
 
 }
 
@@ -48,7 +108,7 @@ text-decoration: none;
   width: 300px;
   /* height: 200px; */
   /* margin: 0 auto; */
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
   border-radius: 30px;
   position: relative;
   box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.3
