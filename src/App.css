@@ -9,19 +9,22 @@
 
 body{
     height: 100vh;
+    /* position: relative; */
   }
 
-/* .App {
-  text-align: center; 
-  background-color: rgb(7, 11, 51);
+.App {
+  /* text-align: center; 
+  background-color: rgb(7, 11, 51); */
+  position: relative;
   
 
-} */
+}
 
 
 .container-login{
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  position: relative;
 }
 .container-img {
 
@@ -100,8 +103,12 @@ input#search-bar {
 
 
 .footer {
-	margin-top: 520px;
+	position: absolute;
+  background-color: tomato;
+	bottom: 0;
+  width: 100%;
 }
+
 
 .footer>.red{
   height: 60px;  

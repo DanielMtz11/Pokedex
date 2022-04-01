@@ -52,13 +52,13 @@ const Login = () => {
                 </form>
 
 
-                <footer className='footer'>
+                <section className='footer'>
                     <div className='red'>
 
                     </div>
 
                     <div className='black'></div>
-                </footer>
+                </section>
 
         </div>
     );
