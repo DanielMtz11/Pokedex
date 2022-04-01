@@ -3,7 +3,7 @@ import { useState } from 'react';
 import {useDispatch} from 'react-redux';
 import {useNavigate} from 'react-router-dom';
 import img from '../img/logo.png';
-import search from '../img/search-icon.png'
+// import search from '../img/search-icon.png'
 
 import pokeball from '../img/pokeball.png'
 

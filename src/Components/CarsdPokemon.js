@@ -122,9 +122,9 @@ const CarsdPokemon = ({pokemonUrl}) => {
         // console.log(Pokemon.types);
 
 
-        Pokemon.types?.map(type =>{
-            // console.log(type.type?.name)
-        })
+        // Pokemon.types?.map(type =>{
+        //     // console.log(type.type?.name)
+        // })
         return (
             <>
 

@@ -140,12 +140,7 @@ const Pokedex = () => {
             // console.log(Types)
 
                 
-                switch(Types){
-                    case "normal":
-                        return console.log("normal");
-
-
-                }
+            
 
 }
 
