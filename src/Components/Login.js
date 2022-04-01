@@ -33,11 +33,11 @@ const Login = () => {
         <div>
                 {/* <h2>Login</h2> */}
                 <section className='container-img'>
-                <img class="logo"  src={img} alt="Pokemon"></img>
+                <img className="logo"  src={img} alt="Pokemon"></img>
                 </section>
 
 
-                <form onSubmit={submit} class="search-container">
+                <form onSubmit={submit} className="search-container">
                     <input type="text"
                             id="search-bar" 
                             placeholder="What`s your name?"
