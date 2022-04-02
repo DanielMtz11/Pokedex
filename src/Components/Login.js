@@ -40,8 +40,12 @@ const Login = () => {
                 <img className="logo"  src={podedeximg} alt="Pokemon"></img>
                 </f>
 
+
+                <section  className='greet'>
+
                 <h2>Hello Trainer !</h2>
                 <p>Give me your name to start</p>
+                </section>
 
                 <form onSubmit={submit} className="search-container">
                     <input type="text"
@@ -56,6 +60,8 @@ const Login = () => {
                 </form>
 
 
+
+
                 <section className='footer'>
                     <div className='red'>
 
@@ -63,6 +69,9 @@ const Login = () => {
 
                     <div className='black'></div>
                 </section>
+
+
+            <button onClick={ submit} className='btn' >
 
                 <div  className='elipse'>
                     <img src={elipse} alt="" />
@@ -72,6 +81,7 @@ const Login = () => {
                     <img src={elipse2} alt="" />
                 </div>
 
+            </button>
 
         </div>
     );
