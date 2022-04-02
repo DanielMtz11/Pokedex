@@ -59,15 +59,15 @@ const Login = () => {
                             onChange={e=>setUserName(e.target.value)}
                             value={userName}
                             required/>
-                    <button className='search-icon' >
-                        Go
+                    <button className='search-icon' >Go
                             {/* <img src={pokeball} alt="" /> */}
                     </button>
                 </form>
 
 
                 <section className='loginImg'>
-                        <img src={size < 460 ? loginImg338px: loginImg} alt="" />
+                        {size<1024 &&
+                        <img src={size <460? loginImg338px : loginImg} alt="" />}
                 </section>
 
 

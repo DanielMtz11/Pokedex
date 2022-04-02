@@ -264,9 +264,27 @@ line-height: 30px;
 @media(min-width: 768px){
   .containerCard{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-  
+    grid-template-columns: repeat(2,1fr); 
   }
+
+  /* .footer {
+  
+    bottom: -178px;
+  }
+
+  .elipse {
+
+    
+    bottom: -175px;
+
+  }
+  .elipse2 {
+
+    bottom: -176px;
+
+  } */
+ 
+}
 
   @media(min-width: 1024px){
     .containerCard{
@@ -277,4 +295,25 @@ line-height: 30px;
     
   
   }
+
+
+@media(min-width: 1024px){
+/* 
+  .footer {
+  
+    bottom: -178px;
+  }
+
+  .elipse {
+
+    
+    bottom: -175px;
+
+  }
+  .elipse2 {
+
+    bottom: -176px;
+
+  } */
+    
 }
