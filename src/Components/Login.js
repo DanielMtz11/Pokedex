@@ -9,7 +9,8 @@ import podedeximg from '../img/pokedex.png'
 
 import pokeball from '../img/pokeball.png'
 
-// import loginImg from '../img/loginImg.png'
+import loginImg from '../img/loginImg.png'
+
 import loginImg338px from'../img/loginImg338px.png'
 
 const Login = () => {
@@ -20,6 +21,9 @@ const Login = () => {
     const dispatch = useDispatch();
 
     const [userName, setUserName]=useState("");
+
+    const size = window.screen.width;
+    console.log(size);
 
     const submit =(e)=>{
         e.preventDefault();
@@ -37,9 +41,9 @@ const Login = () => {
     return (
         <div className='container-login'>
                 {/* <h2>Login</h2> */}
-                <f className='container-img'>
+                <section className='container-img'>
                 <img className="logo"  src={podedeximg} alt="Pokemon"></img>
-                </f>
+                </section>
 
 
                 <section  className='greet'>
@@ -62,7 +66,7 @@ const Login = () => {
 
 
                 <section className='loginImg'>
-                        <img src={loginImg338px} alt="" />
+                        <img src={size < 480 ? loginImg338px: loginImg} alt="" />
                 </section>
 
 
