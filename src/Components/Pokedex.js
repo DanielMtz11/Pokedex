@@ -32,7 +32,7 @@ const Pokedex = () => {
     
     const userName = useSelector(state => state.userName);
 
-    const isDark = useSelector(state => state.isDark);
+    // const isDark = useSelector(state => state.isDark);
 
     const dispatch = useDispatch();//useDispatch sirve para ejecutar las acciones que se encuentran en el swicht de redux
 
