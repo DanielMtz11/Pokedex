@@ -152,6 +152,13 @@ input#search-bar {
       align-items: center;
       gap: 15px;
       margin: 20px 0px 70px;
+      font-size: 20px;
+    }
+
+
+    .greet>h2 {
+      color: #DD1A1A;
+      font-weight: bold;
     }
 
 

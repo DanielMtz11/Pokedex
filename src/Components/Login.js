@@ -71,7 +71,7 @@ const Login = () => {
                 </section>
 
 
-            <button onClick={ submit} className='btn' >
+            <button onClick={submit} className='btn' >
 
                 <div  className='elipse'>
                     <img src={elipse} alt="" />
