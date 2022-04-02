@@ -7,7 +7,7 @@ import elipse2 from '../img/Ellipse2.png'
 
 import podedeximg from '../img/pokedex.png'
 
-import pokeball from '../img/pokeball.png'
+// import pokeball from '../img/pokeball.png'
 
 import loginImg from '../img/loginImg.png'
 
