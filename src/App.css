@@ -118,10 +118,33 @@ body{
 }
 
 
+.top {
+	position: absolute;
+	top: 0;
+  width: 100%;
+}    
+
+
+
 .footer>.red{
   height: 100px;  
   background-color: #DD1A1A;
   
+  }
+
+
+  .top>.red-top{
+    height: 60px;
+    background-color: #DD1A1A;
+  
+  }
+
+
+  .top>.black{
+    height: 40px;  
+    background-color: black;
+
+
   }
 
 .footer>.black{
@@ -133,15 +156,41 @@ body{
     cursor: pointer;
   }
 
-    .elipse {
+
+
+  .elipse {
+    height: 120px;
+  }
+
+
+    .elipse , .elipse-top{
       position: absolute;
       width: 100%;
       bottom: 0;
-      height: 120px;
       display: flex;
       justify-content: center;
     }
 
+
+
+    .elipse-top {
+      bottom: -26px;
+      justify-content: end;
+      height: 90px;
+      right: 23px;
+    }
+
+   
+    .elipse2-top {
+      position: absolute;
+      width: 100%;
+      bottom: -5px;
+      height: 48px;
+      display: flex;
+      justify-content: end;
+      right: 44px;
+    }
+    
     .elipse2 {
       position: absolute;
       width: 100%;
@@ -182,22 +231,18 @@ body{
 
 
 
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  
+
+.containerPokedex{
+  padding-top: 100px;
+  font-family: 'Roboto Mono', monospace;
 }
 
 
-
-
-.pokedex{
-
-  font-family: 'Permanent Marker', cursive;  text-align: center;
-  font-size: 35px;
-  color: tomato;
-
+.container-img-top > img {
+	width: 198px;
+	height: 37px;
+	position: relative;
+  top: 25px;
 }
 
 .welcome{
@@ -226,9 +271,7 @@ text-decoration: none;
   text-align: center;
   padding: 30px;
   width: 300px;
-  /* height: 200px; */
-  /* margin: 0 auto; */
-  /* background-color: antiquewhite; */
+
   border-radius: 30px;
   position: relative;
   box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.3
@@ -238,11 +281,9 @@ text-decoration: none;
 .cardPokemon>.id {
   position: absolute;
   right: 0;
-  /* text-align: center; */
   padding-top: 4px;
   width: 60px;
   height: 25px;
-  /* padding: 20px; */
   margin: 50x 0;
   background-color: rgb(202, 54, 24);
   border-radius: 50px;
@@ -261,29 +302,25 @@ line-height: 30px;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media(min-width: 768px){
   .containerCard{
     display: grid;
     grid-template-columns: repeat(2,1fr); 
   }
 
-  /* .footer {
-  
-    bottom: -178px;
-  }
-
-  .elipse {
-
-    
-    bottom: -175px;
-
-  }
-  .elipse2 {
-
-    bottom: -176px;
-
-  } */
- 
 }
 
   @media(min-width: 1024px){
@@ -298,22 +335,13 @@ line-height: 30px;
 
 
 @media(min-width: 1024px){
-/* 
-  .footer {
-  
-    bottom: -178px;
-  }
-
-  .elipse {
-
-    
-    bottom: -175px;
+  .search-container {
+    width: auto;
+    display: block;
+    overflow-x: hidden;
+    margin: 0 auto;
+    max-width: 600px;
 
   }
-  .elipse2 {
-
-    bottom: -176px;
-
-  } */
     
 }

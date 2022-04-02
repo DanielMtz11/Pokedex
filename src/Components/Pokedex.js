@@ -6,6 +6,12 @@ import {useSelector, useDispatch} from 'react-redux'
 import CarsdPokemon from './CarsdPokemon';
 import {useNavigate} from 'react-router-dom'
 
+import elipse from '../img/Ellipsetop.png'
+import elipse2 from '../img/Ellipse2.png'
+
+import podedeximg from '../img/pokedex.png'
+
+
 
 const Pokedex = () => {
     const [Pokemons, setPokemons]= useState(null) //para almacenar los pokemons consumidos
@@ -145,7 +151,31 @@ const Pokedex = () => {
 
     return (
         <>
-                <p className='pokedex'>Pokedex</p>
+
+        
+                <section className='top'>
+                    <div className='red-top'></div>
+
+                    <div className='black'></div>
+
+
+                    <div  className='elipse-top'>
+                        <img src={elipse} alt="" />
+                    </div>
+                    
+
+                    <div  className='elipse2-top'>
+                        <img src={elipse2} alt="" />
+                    </div>
+
+                    
+                </section>
+                    <section className='container-img-top'>
+                        <img className="logo"  src={podedeximg} alt="Pokemon"></img>
+                    </section>
+        
+                <section className='containerPokedex'>
+
                 <button onClick={()=>dispatch({type: "SET_ISDARK"})}> {isDark? "whitesmoke": "black"}</button>
                 <p className='welcome'>welcome <span>{userName}</span> </p>
 
@@ -223,6 +253,7 @@ const Pokedex = () => {
                         </button>
 
 
+                        </section>
 
 
         </>
