@@ -253,6 +253,8 @@ body{
 .welcome>span{
   font-weight: bold;
   text-transform: capitalize;
+  color: #DD1A1A;
+  display: block;
 }
 .containerCard{
   display: flex;

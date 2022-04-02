@@ -20,7 +20,7 @@ function App() {
 
 
   const style ={
-      background: isDark? ("black"):("white")
+      background: isDark? ("black"):("whitesmoke")
   }
 
   console.log(isDark)

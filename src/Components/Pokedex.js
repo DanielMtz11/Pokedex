@@ -10,6 +10,7 @@ import elipse from '../img/Ellipsetop.png'
 import elipse2 from '../img/Ellipse2.png'
 
 import podedeximg from '../img/pokedex.png'
+import mod from '../img/mod.png'
 
 
 
@@ -176,8 +177,10 @@ const Pokedex = () => {
         
                 <section className='containerPokedex'>
 
-                <button onClick={()=>dispatch({type: "SET_ISDARK"})}> {isDark? "whitesmoke": "black"}</button>
-                <p className='welcome'>welcome <span>{userName}</span> </p>
+                <button onClick={()=>dispatch({type: "SET_ISDARK"})}>
+                    <img src={mod} alt="" />
+                </button>
+                <p className='welcome'> <span>welcome {userName}</span> here you can find your favorite pokemon </p>
 
                 <div>
                     <select onChange={handleSelect} name="" id="">
