@@ -60,13 +60,14 @@ const Login = () => {
                             value={userName}
                             required/>
                     <button className='search-icon' >
-                            <img src={pokeball} alt="" />
+                        Go
+                            {/* <img src={pokeball} alt="" /> */}
                     </button>
                 </form>
 
 
                 <section className='loginImg'>
-                        <img src={size < 420 ? loginImg338px: loginImg} alt="" />
+                        <img src={size < 460 ? loginImg338px: loginImg} alt="" />
                 </section>
 
 
