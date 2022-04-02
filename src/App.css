@@ -8,6 +8,7 @@
   
 }
 
+
 body{
     height: 100vh;
     /* position: relative; */
@@ -67,7 +68,8 @@ body{
 .search-container {
 	width: auto;
 	display: block;
-	margin: 0 60px;
+	overflow-x: hidden;
+  margin: 0 60px;
 }
 
 input#search-bar {
@@ -162,9 +164,13 @@ input#search-bar {
     }
 
 
-  /* .greet>h2{ */
 
-
+    .loginImg{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      
+    }
 
 
 

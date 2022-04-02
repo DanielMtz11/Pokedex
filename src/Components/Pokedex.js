@@ -146,7 +146,7 @@ const Pokedex = () => {
     return (
         <>
                 <p className='pokedex'>Pokedex</p>
-                <button onClick={()=>dispatch({type: "SET_ISDARK"})}> {isDark? "white": "black"}</button>
+                <button onClick={()=>dispatch({type: "SET_ISDARK"})}> {isDark? "whitesmoke": "black"}</button>
                 <p className='welcome'>welcome <span>{userName}</span> </p>
 
                 <div>

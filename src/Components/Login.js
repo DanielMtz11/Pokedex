@@ -2,14 +2,15 @@ import React from 'react';
 import { useState } from 'react';
 import {useDispatch} from 'react-redux';
 import {useNavigate} from 'react-router-dom';
-// import img from '../img/logo.png';
 import elipse from '../img/Ellipse.png'
 import elipse2 from '../img/Ellipse2.png'
 
 import podedeximg from '../img/pokedex.png'
-// import search from '../img/search-icon.png'
 
 import pokeball from '../img/pokeball.png'
+
+// import loginImg from '../img/loginImg.png'
+import loginImg338px from'../img/loginImg338px.png'
 
 const Login = () => {
 
@@ -60,6 +61,9 @@ const Login = () => {
                 </form>
 
 
+                <section className='loginImg'>
+                        <img src={loginImg338px} alt="" />
+                </section>
 
 
                 <section className='footer'>
