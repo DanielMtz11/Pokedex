@@ -66,7 +66,7 @@ const Login = () => {
 
 
                 <section className='loginImg'>
-                        <img src={size < 480 ? loginImg338px: loginImg} alt="" />
+                        <img src={size < 420 ? loginImg338px: loginImg} alt="" />
                 </section>
 
 
