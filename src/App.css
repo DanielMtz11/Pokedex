@@ -294,6 +294,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
+  gap:30px;
 }
 
 .inputPokemon{
@@ -428,6 +430,10 @@ line-height: 30px;
   .containerCard{
     display: grid;
     grid-template-columns: repeat(2,1fr); 
+  }
+
+  .inputPokemon {
+    padding: 0 145px;
   }
 
 }

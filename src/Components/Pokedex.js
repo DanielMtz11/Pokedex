@@ -110,9 +110,11 @@ const Pokedex = () => {
     const Submit=(e)=>{
         e.preventDefault();
     
+
+        const lowerCaseNameorId =NameOrId.toLowerCase()
         // NameOrId.toUpperCase();
-        console.log(NameOrId)
-        Navigate(`/pokedex/${NameOrId}`)
+        console.log(lowerCaseNameorId)
+        Navigate(`/pokedex/${lowerCaseNameorId}`)
     }
 
 
