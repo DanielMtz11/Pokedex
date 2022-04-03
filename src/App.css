@@ -290,19 +290,15 @@
 }
 
 .select {
-	border: .5px solid #b9b9b9;
-	/* border-radius: 12px; */
-	display: flex;
-	height: 40px;
-	/* min-width: 250px; */
-	overflow: hidden;
-	position: relative;
-	box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-	border-radius: 14px;
-	width: 295px;
-	/* padding: 0 60px; */
-	background-color: #fff;
-	/* margin: 0 30px; */
+  background-color: #fff;
+  border: .5px solid #b9b9b9;
+  border-radius: 14px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,.3);
+  display: flex;
+  height: 43px;
+  overflow: hidden;
+  position: relative;
+  width: 319px;
 }
 
 .select::after {
