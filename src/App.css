@@ -288,35 +288,66 @@
   color: #DD1A1A;
   display: block;
 }
+
 .select {
 	border: .5px solid #b9b9b9;
 	/* border-radius: 12px; */
 	display: flex;
 	height: 40px;
-	min-width: 250px;
+	/* min-width: 250px; */
 	overflow: hidden;
 	position: relative;
 	box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+	border-radius: 14px;
+	width: 295px;
+	/* padding: 0 60px; */
+	background-color: #fff;
+	/* margin: 0 30px; */
 }
+
+.select::after {
+	background-color: #d93f3f;
+	color: #f0f8ff;
+	content: "▼";
+	cursor: pointer;
+	/* font-size: 14px; */
+	height: 35px;
+	padding: 7px 2px 8px 14px;
+	pointer-events: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 27px;
+}
+
+
 .select > select {
 	appearance: none;
-	/* background-color: #fff; */
-	/* border: 0 !important; */
-	color: #080808;
+	background-color: #fff;
+	border: 0 !important;
+	color: #827777;
 	cursor: pointer;
 	/* flex: 1 1; */
-	font-size: 20px;
+	font-size: 1rem;
 	outline: 0;
-	padding: 0px 60px;
-	width: 290px;
-	height: 90px;
+	width: 100%;
+	padding: 0 91px;
 }
+
+.select > select >option {
+  font-weight: normal;
+  display: block;
+  white-space: nowrap;
+  min-height: 1.2em;
+  padding: 0px 2px 1px;
+}
+
 
 
 .select > select>option {
-
-  color: #080808;
   
+  color: #080808;
+
 }
 
 
@@ -332,13 +363,9 @@
 }
 
 
-option {
-  font-weight: normal;
-  display: block;
-  white-space: nowrap;
-  min-height: 1.2em;
-  padding: 0px 2px 1px;
-}
+
+
+
 
 .inputPokemon{
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
@@ -456,29 +483,6 @@ line-height: 30px;
 
 
 
-.select{
-  border: .5px solid #b9b9b9;
-  border-radius: 12px;
-  display: flex;
-  height: 35px;
-  min-width: 250px;
-  overflow: hidden;
-  position: relative;
-}
-
-
-.select> select {
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: #fff;
-  border: 0!important;
-  color: #080808;
-  cursor: pointer;
-  flex: 1 1;
-  font-size: .5em;
-  outline: 0;
-  padding: 0 15px;
-}
 
 
 

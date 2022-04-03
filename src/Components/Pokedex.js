@@ -194,7 +194,6 @@ const Pokedex = () => {
 
                 <section className='inputs'> 
 
-
                 <form onSubmit={Submit}>
                     {/* <label htmlFor="id/name">Look for Name/Id</label> */}
                     <input className='inputPokemon'
@@ -208,8 +207,6 @@ const Pokedex = () => {
                         <img src={search} alt="" />
                     </button>
                 </form >
-
-
 
                 <div className='select'>
                     <select  onChange={handleSelect} name="" id="">
@@ -229,8 +226,6 @@ const Pokedex = () => {
                 </section>
 
 
-           
-                
                     <ul className='containerCard'>
 
                         <button onClick={()=>setIteration(iteration-1)}
@@ -251,7 +246,6 @@ const Pokedex = () => {
                                 »
                         </button>
         
-                       
                 {
 
 
