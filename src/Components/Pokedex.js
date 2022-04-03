@@ -13,6 +13,9 @@ import podedeximg from '../img/pokedex.png'
 // import mod from '../img/mod.png'
 import darkmod from '../img/darkmod.png'
 import whitemod from '../img/whitemod.png'
+import search from '../img/search-icon.png'
+
+
 
 
 
@@ -106,7 +109,7 @@ const Pokedex = () => {
 
     const Submit=(e)=>{
         e.preventDefault();
-        // console.log(NameOrId);
+    
         Navigate(`/pokedex/${NameOrId}`)
     }
 
@@ -182,7 +185,27 @@ const Pokedex = () => {
                 <button className='btnMod' onClick={()=>dispatch({type: "SET_ISDARK"})}>
                     <img src={isDark? whitemod : darkmod} alt="" />
                 </button>
+
                 <p className='welcome'> <span>welcome {userName}</span> here you can find your favorite pokemon </p>
+
+                <section className='inputs'> 
+
+
+                <form onSubmit={Submit}>
+                    {/* <label htmlFor="id/name">Look for Name/Id</label> */}
+                    <input className='inputPokemon'
+                            type="text"  id="id/name"
+                            onChange={e => setNameOrId(e.target.value)}
+                            value={NameOrId}
+                            placeholder="pokemon name/id..."
+
+                            />
+                    <button className='btnSearch' >
+                        <img src={search} alt="" />
+                    </button>
+                </form >
+
+
 
                 <div>
                     <select onChange={handleSelect} name="" id="">
@@ -199,16 +222,10 @@ const Pokedex = () => {
 
                     </select>
                 </div>
+                </section>
 
 
-                <form onSubmit={Submit}>
-                    <label htmlFor="id/name">Look for Name/Id</label>
-                    <input type="text"  id="id/name"
-                            onChange={e => setNameOrId(e.target.value)}
-                            value={NameOrId}/>
-                    <button >Submit</button>
-
-                </form >
+           
                 
                     <ul className='containerCard'>
 
