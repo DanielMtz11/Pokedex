@@ -124,9 +124,10 @@
 .top {
 	position: absolute;
 	top: 0;
-  width: 100%;
-}    
-
+	width: 100%;
+	position: fixed;
+	z-index: 2;
+}
 
 
 .footer>.red{
@@ -241,34 +242,39 @@
 }
 
 .btnMod {
-	background-color: #DD1A1A;
+	/* background-color: ; */
 	position: absolute;
 	/* bottom: 27px; */
 	/* right: 0; */
 	border: none;
 	cursor: pointer;
-	position: fixed;
 	/* width: 59px; */
 	border-radius: 33px;
 	left: 0;
 	top: 60px;
 	height: 40px;
+  z-index: 3;
+  position: fixed;
 }
 
 .btnMod > img {
 	margin: 0px 12px;
 	padding: 2px;
+  transition: all;
 }
 .container-img-top > img {
 	width: 198px;
 	height: 37px;
 	position: relative;
   top: 25px;
+  z-index: 3;
+  position: fixed;
 }
 
 .welcome{
   font-size: 20px;
   text-align: center;
+  padding-top: 50px;
 }
 
 .welcome>span{
@@ -297,7 +303,7 @@ text-decoration: none;
   text-align: center;
   padding: 30px;
   width: 300px;
-
+  z-index: 1;
   border-radius: 30px;
   position: relative;
   box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.3
