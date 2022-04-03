@@ -9,9 +9,12 @@
 }
 
 
-body{
+
+
+  body {
     height: 100vh;
     /* position: relative; */
+    overflow-x: hidden;
   }
 
 .App {
@@ -236,8 +239,14 @@ body{
   padding-top: 100px;
   font-family: 'Roboto Mono', monospace;
 }
-
-
+.btnMod {
+	background-color: #DD1A1A;
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: none;
+	cursor: pointer;
+}
 .container-img-top > img {
 	width: 198px;
 	height: 37px;
@@ -246,13 +255,14 @@ body{
 }
 
 .welcome{
-  font-size: 25px;
+  font-size: 20px;
   text-align: center;
 }
 
 .welcome>span{
-
   
+  font-size: 25px;
+
   font-weight: bold;
   text-transform: capitalize;
   color: #DD1A1A;

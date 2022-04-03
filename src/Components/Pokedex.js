@@ -177,13 +177,15 @@ const Pokedex = () => {
         
                 <section className='containerPokedex'>
 
-                <button onClick={()=>dispatch({type: "SET_ISDARK"})}>
+                <button className='btnMod' onClick={()=>dispatch({type: "SET_ISDARK"})}>
                     <img src={mod} alt="" />
                 </button>
                 <p className='welcome'> <span>welcome {userName}</span> here you can find your favorite pokemon </p>
 
                 <div>
                     <select onChange={handleSelect} name="" id="">
+
+                        <option selected="selected" disabled >All Pokemons</option>
                         {
                             types.map(type =>(
                                 
