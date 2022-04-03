@@ -110,6 +110,8 @@ const Pokedex = () => {
     const Submit=(e)=>{
         e.preventDefault();
     
+        // NameOrId.toUpperCase();
+        console.log(NameOrId)
         Navigate(`/pokedex/${NameOrId}`)
     }
 
@@ -197,8 +199,8 @@ const Pokedex = () => {
                             type="text"  id="id/name"
                             onChange={e => setNameOrId(e.target.value)}
                             value={NameOrId}
-                            placeholder="pokemon name/id..."
-
+                            placeholder="pokemon name/id"
+                            required
                             />
                     <button className='btnSearch' >
                         <img src={search} alt="" />
