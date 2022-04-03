@@ -298,7 +298,7 @@
   height: 45px;
   overflow: hidden;
   position: relative;
-  width: 290px;
+  width: 300px;
 }
 
 .select::after {
@@ -381,6 +381,7 @@
 
 form{
 position: relative;
+width: 300px;
 }
 
 
