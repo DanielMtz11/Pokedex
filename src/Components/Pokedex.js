@@ -211,8 +211,8 @@ const Pokedex = () => {
 
 
 
-                <div>
-                    <select onChange={handleSelect} name="" id="">
+                <div className='select'>
+                    <select  onChange={handleSelect} name="" id="">
 
                         <option selected="selected" disabled >All Pokemons</option>
                         {
