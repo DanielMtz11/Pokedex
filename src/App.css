@@ -242,10 +242,20 @@
 .btnMod {
 	background-color: #DD1A1A;
 	position: absolute;
-	top: 0;
+	bottom: 0;
 	right: 0;
 	border: none;
 	cursor: pointer;
+	position: fixed;
+	width: 60px;
+	border-radius: 28px;
+}
+
+.btnMod > img {
+	text-align: center;
+
+	margin: 0px 11px;
+	padding: 5px;
 }
 .container-img-top > img {
 	width: 198px;

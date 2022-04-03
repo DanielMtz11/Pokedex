@@ -10,7 +10,9 @@ import elipse from '../img/Ellipsetop.png'
 import elipse2 from '../img/Ellipse2.png'
 
 import podedeximg from '../img/pokedex.png'
-import mod from '../img/mod.png'
+// import mod from '../img/mod.png'
+import darkmod from '../img/darkmod.png'
+import whitemod from '../img/whitemod.png'
 
 
 
@@ -32,7 +34,7 @@ const Pokedex = () => {
     
     const userName = useSelector(state => state.userName);
 
-    // const isDark = useSelector(state => state.isDark);
+    const isDark = useSelector(state => state.isDark);
 
     const dispatch = useDispatch();//useDispatch sirve para ejecutar las acciones que se encuentran en el swicht de redux
 
@@ -178,7 +180,7 @@ const Pokedex = () => {
                 <section className='containerPokedex'>
 
                 <button className='btnMod' onClick={()=>dispatch({type: "SET_ISDARK"})}>
-                    <img src={mod} alt="" />
+                    <img src={isDark? whitemod : darkmod} alt="" />
                 </button>
                 <p className='welcome'> <span>welcome {userName}</span> here you can find your favorite pokemon </p>
 
