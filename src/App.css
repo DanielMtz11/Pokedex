@@ -263,14 +263,13 @@
   transition: all;
 }
 .container-img-top > img {
-	width: 198px;
-	height: 37px;
+	width: 209px;
+	height: 45px;
 	position: relative;
-  top: 25px;
-  z-index: 3;
-  position: fixed;
+	top: 18px;
+	z-index: 3;
+	position: fixed;
 }
-
 .welcome{
   font-size: 20px;
   text-align: center;
