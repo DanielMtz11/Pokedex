@@ -509,8 +509,18 @@ line-height: 30px;
 
 
 
+.sectionPagination{
+  display: flex;
+  justify-content: center;
+}
 
 
+
+.sectionPagination>button, .sectionPagination>div>button{
+  width: 25px;
+  height: 25px;
+  margin: 30px 0px;
+}
 
 
 
@@ -551,6 +561,13 @@ line-height: 30px;
 }
 
   @media(min-width: 1024px){
+    .search-icon {
+      right: 60px;
+    }
+
+    input#search-bar {
+      max-width: 540px;
+    }
     .containerCard{
       display: grid;
       grid-template-columns: repeat(3,1fr);

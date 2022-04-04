@@ -262,6 +262,10 @@ const Pokedex = () => {
 
                         </ul>
 
+
+
+                    <section className='sectionPagination'>
+
                         <button onClick={()=>setIteration(iteration-1)}
                                 disabled={ iteration<=1}>
                                 «
@@ -279,12 +283,9 @@ const Pokedex = () => {
                                 disabled ={iteration >=totalShowPage }>
                                 »
                         </button>
-        
-
                     
-
-
-                        </section>
+                    </section>
+                </section>
 
 
         </>
