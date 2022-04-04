@@ -416,9 +416,23 @@ width: 300px;
 }
 
 
-.sectionBtns>button{
-  border: none;
+.sectionBtns > button {
+	border: none;
+	width: 50px;
+	cursor: pointer;
+	background: whitesmoke;
+	margin: -2px;
+	padding: 2px 0;
 }
+
+.sectionBtns > p {
+  padding: 3px;
+}
+
+.sectionBtns > p> span {
+color: #DD1A1A;
+}
+
 
 
 
@@ -507,9 +521,8 @@ line-height: 30px;
     display: grid;
     grid-template-columns: repeat(2,1fr); 
   }
-
   .inputPokemon {
-    padding: 0 145px;
+    padding: 0 134px;
   }
 
 
@@ -532,8 +545,7 @@ line-height: 30px;
 
   }
   .select > select {
-
-    padding: 0 162px;
+    padding: 0 148px;
   }
 
 }
@@ -559,6 +571,15 @@ line-height: 30px;
       margin: 0 auto;
       max-width: 600px;
   
+    }
+
+    .inputs {
+      padding-top: 40px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
     }
 
     

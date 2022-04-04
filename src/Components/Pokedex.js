@@ -237,7 +237,7 @@ const Pokedex = () => {
                         </button>
         
                         <p>
-                            {page}/ {totalPage}
+                            <span> {page }</span> / {totalPage}
                         </p>
                         <button onClick={()=>setPage(page+1)}
                                 disabled={page >=totalPage}>
