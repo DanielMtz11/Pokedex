@@ -501,6 +501,12 @@ line-height: 30px;
     padding: 0 145px;
   }
 
+
+  form{
+    width: 400px;  
+  }
+
+
   .select {
     border: .5px solid #b9b9b9;
     /* border-radius: 12px; */
@@ -511,7 +517,7 @@ line-height: 30px;
     position: relative;
     box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
     border-radius: 14px;
-    width: 490px;
+    width: 400px;
 
   }
 
@@ -523,19 +529,25 @@ line-height: 30px;
       grid-template-columns: repeat(3,1fr);
     
     }
+    .container-img > img {
+      width: 468px;
+      height: 84px;
+    }
+
+    .greet {
+      font-size: 24px;
+    }
+    .search-container {
+      width: auto;
+      display: block;
+      overflow-x: hidden;
+      margin: 0 auto;
+      max-width: 600px;
+  
+    }
+
     
   
   }
 
 
-@media(min-width: 1024px){
-  .search-container {
-    width: auto;
-    display: block;
-    overflow-x: hidden;
-    margin: 0 auto;
-    max-width: 600px;
-
-  }
-    
-}
