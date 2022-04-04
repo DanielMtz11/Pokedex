@@ -96,7 +96,7 @@
 	width: 61px;
 	border: none;
 	cursor: pointer;
-	background: tomato;
+	background: #DD1A1A;
 	border-radius: 16px;
 	color: whitesmoke;
 	font-size: 15px;
@@ -115,7 +115,7 @@
 
 .footer {
 	position: absolute;
-  background-color: tomato;
+  /* background-color: #DD1A1A; */
 	bottom: 0;
   width: 100%;
 }
@@ -302,7 +302,7 @@
 }
 
 .select::after {
-	background-color: #d93f3f;
+	background-color: #DD1A1A;
 	color: #f0f8ff;
 	content: "▼";
 	cursor: pointer;
@@ -327,7 +327,7 @@
 	font-size: 1rem;
 	outline: 0;
 	width: 100%;
-	padding: 0 91px;
+	padding: 0 98px;
 }
 
 .select > select >option {
@@ -369,7 +369,7 @@
   height: 45px;
   margin: 0 auto;
   outline: none;
-  padding: 0 60px;
+  padding: 0 76px;
   width: 100%;
   border: none;
   border-radius: 15px;
@@ -408,6 +408,17 @@ width: 300px;
 	/* height: 10px; */
 }
 
+
+.sectionBtns{
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.sectionBtns>button{
+  border: none;
+}
 
 
 
@@ -519,6 +530,10 @@ line-height: 30px;
     border-radius: 14px;
     width: 400px;
 
+  }
+  .select > select {
+
+    padding: 0 162px;
   }
 
 }

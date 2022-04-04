@@ -15,6 +15,9 @@ import darkmod from '../img/darkmod.png'
 import whitemod from '../img/whitemod.png'
 import search from '../img/search-icon.png'
 
+import next from '../img/next.png'
+import back from '../img/back.png'
+
 
 
 
@@ -226,7 +229,38 @@ const Pokedex = () => {
                 </section>
 
 
+                    <section className='sectionBtns'>
+                            
+                        <button onClick={()=>{setPage(page-1)}}
+                                disabled={page<=1}>
+                                <img src={back} alt="" />
+                        </button>
+        
+                        <p>
+                            {page}/ {totalPage}
+                        </p>
+                        <button onClick={()=>setPage(page+1)}
+                                disabled={page >=totalPage}>
+                                <img src={next} alt="" />
+                        </button>
+
+                    </section>
+
                     <ul className='containerCard'>
+
+                {
+
+
+                    
+                    pagination?.map(pokemon =>(
+                        
+                    <CarsdPokemon key={pokemon.url?pokemon.url:pokemon.pokemon.url} pokemonUrl={pokemon.url?pokemon.url:pokemon.pokemon.url}  />
+                        
+                
+                    ))
+                }
+
+                        </ul>
 
                         <button onClick={()=>setIteration(iteration-1)}
                                 disabled={ iteration<=1}>
@@ -246,33 +280,8 @@ const Pokedex = () => {
                                 »
                         </button>
         
-                {
-
 
                     
-                    pagination?.map(pokemon =>(
-                        
-                    <CarsdPokemon key={pokemon.url?pokemon.url:pokemon.pokemon.url} pokemonUrl={pokemon.url?pokemon.url:pokemon.pokemon.url}  />
-                        
-                
-                    ))
-                }
-
-
-
-                        </ul>
-
-                        
-                        <button onClick={()=>{setPage(page-1)}}
-                                disabled={page<=1}>
-                                Back
-                        </button>
-        
-
-                        <button onClick={()=>setPage(page+1)}
-                                disabled={page >=totalPage}>
-                                Next
-                        </button>
 
 
                         </section>
