@@ -27,6 +27,10 @@ const Pokedex = () => {
     const [types, setTypes]= useState([]);
     const [page, setPage] =useState(1);
     const [iteration, setIteration] = useState(1);
+
+    const[Number, setNumber] = useState(1);
+
+    const [isCliked, setIsCliked] = useState(false);
     
     //para navegar a podexData
     const Navigate = useNavigate();
@@ -34,7 +38,6 @@ const Pokedex = () => {
 
     const[NameOrId, setNameOrId] = useState("");
     // console.log(Pokemons)
-
 
     //desde la store...
     
@@ -75,7 +78,7 @@ const Pokedex = () => {
                 PageNum.push(i)
             }
 
-            const pagestoShow = 10;
+            const pagestoShow = 8;
             const lastPage = pagestoShow*iteration;
             const firstPage = lastPage - pagestoShow;
             
@@ -161,6 +164,7 @@ const Pokedex = () => {
 
     handleTypes();
 
+    console.log(`num : ${Number}`)
 
     return (
         <>
@@ -266,17 +270,27 @@ const Pokedex = () => {
 
                     <section className='sectionPagination'>
 
-                        <button onClick={()=>setIteration(iteration-1)}
-                                disabled={ iteration<=1}>
+                        <button style={{backgroud: {isCliked}? "red": "black"}} onClick={()=>{
+                                                setIteration(iteration-1)
+                                                setIsCliked(true)}}
+                                                disabled={ iteration<=1}>
                                 «
                         </button>
-                    
                         <div>
                             {
                                 showPage.map( num =>(
-                                    <button onClick={()=> setPage(num)} key={num}>{num} </button>
+                                    <button style={{background : num===Number? "#DD1A1A": "rgb(44, 42, 42)" }} onClick={()=>{ 
+                                                            setPage(num);
+                                                            setNumber(num)}} 
+                                                            key={num}>
+                                                    {num} 
+                                    </button>
+
                                     ))
+
                                 }
+
+
                         </div>
                                 
                         <button onClick={()=> setIteration(iteration+1)}
