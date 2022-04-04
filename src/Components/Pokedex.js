@@ -78,7 +78,7 @@ const Pokedex = () => {
                 PageNum.push(i)
             }
 
-            const pagestoShow = 8;
+            const pagestoShow = 6;
             const lastPage = pagestoShow*iteration;
             const firstPage = lastPage - pagestoShow;
             
