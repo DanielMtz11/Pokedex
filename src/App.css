@@ -5,7 +5,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 
@@ -14,10 +14,10 @@
   body {
     height: 100vh;
     /* position: relative; */
-    overflow-x: hidden;
   }
-
-.App {
+  
+  .App {
+  overflow-x: hidden;
   /* text-align: center; 
   background-color: rgb(7, 11, 51); */
   position: relative;
@@ -634,7 +634,7 @@ line-height: 30px;
     background-color: black;
     width: 330px;
     padding: 11px;
-    margin: 30px 46px;
+    margin: 30px auto;
     border-radius: 16px;
     font-size: 18px;
     box-shadow: 2px 2px 16px rgba(0,0,0,0.5);
