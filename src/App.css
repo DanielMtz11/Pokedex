@@ -670,9 +670,20 @@ line-height: 30px;
     padding: 0 148px;
   }
 
+  .sectionPagination > button, .sectionPagination > div > button {
+    width: 40px;
+    height: 40px;
+
+  }
+
 }
 
   @media(min-width: 1024px){
+    .sectionPagination > button, .sectionPagination > div > button {
+      width: 50px;
+      height: 50px;
+
+    }
     .container-card {
       background-color: black;
       width: 330px;
