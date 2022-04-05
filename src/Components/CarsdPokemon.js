@@ -62,7 +62,6 @@ const CarsdPokemon = ({pokemonUrl}) => {
                                                     ):(
                                                         type ==='bug'?(
                                                             "linear-gradient(90deg, rgba(37,68,34,1) 0%, rgba(88,184,56,0.908000700280112) 100%)"
-                                                          
                                                         ):(
                                                             type ==='ghost'?(
                                                                 // "linear-gradient(0deg, rgba(12,119,230,0.8155637254901961) 12%, rgba(1,2,50,1) 99%)"
