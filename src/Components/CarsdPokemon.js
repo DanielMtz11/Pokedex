@@ -119,7 +119,7 @@ const CarsdPokemon = ({pokemonUrl}) => {
         }
 
 
-        // console.log(Pokemon);
+        console.log(Pokemon);
 
 
         // Pokemon.types?.map(type =>{
@@ -134,21 +134,32 @@ const CarsdPokemon = ({pokemonUrl}) => {
                     
                     <Link to ={`/Pokedex/${Pokemon.name}`} >
                     
-                    
+                    <section className='container-card'>
                     <div className='cardPokemon' style={style} >
+
+                    <img className='Pokedex-img' src={Pokemon?.sprites?.other?.home.front_default} alt="" />
+
     
                     <p className='id'>{Pokemon.id}</p>
                     <h2 className='name'>{Pokemon.name}</h2>
-                    <ul>
-                            types:
+                    
+                    <ul className='types-ul'>
+                            
                         {Pokemon.types?.map(type =>(
-                            <li key={type.type?.url}>{type.type?.name}</li>
+                            
+                            <li key={type.type?.url}>{type.type?.name}  </li>
+                            
                             ))}
+                            {/* types */}
+                        
                     </ul>
-
-                    <img className='Pokedex-img' src={Pokemon?.sprites?.other?.home.front_default} alt="" />
+                    <p>type</p>
     
                     <section className='section'>
+                            <p>hp:
+                                {Pokemon.stats?.[0].base_stat}
+                            </p>
+                            
                             <p>attack:
                                 {Pokemon.stats?.[1].base_stat}
                             </p>
@@ -162,6 +173,8 @@ const CarsdPokemon = ({pokemonUrl}) => {
                             </p>
                     </section>        
                     </div>
+                    </section>
+
                     </Link>
                 }
             </>
