@@ -25,12 +25,10 @@ import back from '../img/back.png'
 const Pokedex = () => {
     const [Pokemons, setPokemons]= useState(null) //para almacenar los pokemons consumidos
     const [types, setTypes]= useState([]);
-    const [page, setPage] =useState(1);
     const [iteration, setIteration] = useState(1);
 
     const[Number, setNumber] = useState(1);
 
-    const [isCliked, setIsCliked] = useState(false);
     
     //para navegar a podexData
     const Navigate = useNavigate();
@@ -39,10 +37,10 @@ const Pokedex = () => {
     const[NameOrId, setNameOrId] = useState("");
     // console.log(Pokemons)
 
-    //desde la store...
+    //*Desde la store...
     
+    const page = useSelector(state => state.page);
     const userName = useSelector(state => state.userName);
-
     const isDark = useSelector(state => state.isDark);
 
     const dispatch = useDispatch();//useDispatch sirve para ejecutar las acciones que se encuentran en el swicht de redux
@@ -107,10 +105,13 @@ const Pokedex = () => {
 
 
         axios.get("https://pokeapi.co/api/v2/type/")
-        .then(r => setTypes(r.data.results))
+        .then(r =>{ 
+                    setTypes(r.data.results)
+                })
 
     },[])
 
+    console.log(page)
 
 
     const Submit=(e)=>{
@@ -126,7 +127,7 @@ const Pokedex = () => {
 
 
     const handleSelect=(e)=>{
-
+        dispatch({type: "RESET_PAGE"})
         let urlTypes = e.target.value
         axios.get(urlTypes)
         .then(r => {
@@ -149,17 +150,18 @@ const Pokedex = () => {
 
    const handleTypes=()=>{
 
-    const Types=[]
-        types.map(type =>(
-            Types.push(type.name)
-            
-            ))
-            // console.log(Types)
-
-                
-            
-
-}
+       const Types=[]
+       types.map(type =>(
+           Types.push(type.name)
+           
+           ))
+           // console.log(Types)
+           
+           
+           
+           
+        }
+        // dispatch({type: "RESET_PAGE"})
 
 
     handleTypes();
@@ -235,7 +237,9 @@ const Pokedex = () => {
 
                     <section className='sectionBtns'>
                             
-                        <button onClick={()=>{setPage(page-1)}}
+                        <button onClick={()=>{ dispatch({type: "SET_PAGE-1"})}}
+                                                
+                                                // setPage(page-1)}}
                                 disabled={page<=1}>
                                 <img src={back} alt="" />
                         </button>
@@ -243,7 +247,7 @@ const Pokedex = () => {
                         <p>
                             <span> {page }</span> / {totalPage}
                         </p>
-                        <button onClick={()=>setPage(page+1)}
+                        <button onClick={()=>dispatch({type: "SET_PAGE+1"})}
                                 disabled={page >=totalPage}>
                                 <img src={next} alt="" />
                         </button>
@@ -270,17 +274,18 @@ const Pokedex = () => {
 
                     <section className='sectionPagination'>
 
-                        <button style={{backgroud: {isCliked}? "red": "black"}} onClick={()=>{
-                                                setIteration(iteration-1)
-                                                setIsCliked(true)}}
+                        <button style={{backgroud: "black"}} onClick={()=>{
+                                                setIteration(iteration-1)}}
                                                 disabled={ iteration<=1}>
                                 «
                         </button>
                         <div>
                             {
                                 showPage.map( num =>(
-                                    <button style={{background : num===Number? "#DD1A1A": "rgb(44, 42, 42)" }} onClick={()=>{ 
-                                                            setPage(num);
+                                    <button style={{background : num===Number? "#DD1A1A": "rgb(44, 42, 42)" }} onClick={()=>{
+                                                            dispatch({type: "SET_PAGE",
+                                                                        payload: num})
+                                                            // setPage(num);
                                                             setNumber(num)}} 
                                                             key={num}>
                                                     {num} 

@@ -23,7 +23,7 @@ function App() {
       background: isDark? ("black"):("whitesmoke")
   }
 
-  console.log(isDark)
+  // console.log(isDark)
   return (
 
     <HashRouter>

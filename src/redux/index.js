@@ -2,7 +2,8 @@
 const INITIAL_STATE = {
     //propiedades que van a ser parte de este estado
     userName: "",
-    isDark : false
+    isDark : false,
+    page : 1
 
 
 }
@@ -20,6 +21,30 @@ const reducer = (state = INITIAL_STATE, action) => {
                 isDark: !state.isDark
             }
         
+        case "SET_PAGE-1":
+            return{
+                ...state,
+                page: state.page -1
+
+            }
+        
+        case "SET_PAGE+1":
+                return{
+                    ...state,
+                    page: state.page +1
+                }
+        
+        case "SET_PAGE":
+            return{
+                ...state,
+                page: action.payload
+            }
+        
+        case "RESET_PAGE":
+            return{
+                ...state,
+                page :1
+            }
 
     default:
 	    return state;

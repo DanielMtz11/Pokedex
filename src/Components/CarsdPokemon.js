@@ -119,7 +119,7 @@ const CarsdPokemon = ({pokemonUrl}) => {
         }
 
 
-        // console.log(Pokemon.types);
+        // console.log(Pokemon);
 
 
         // Pokemon.types?.map(type =>{
@@ -128,7 +128,7 @@ const CarsdPokemon = ({pokemonUrl}) => {
         return (
             <>
 
-
+                
                 {
                     
                     
@@ -146,7 +146,7 @@ const CarsdPokemon = ({pokemonUrl}) => {
                             ))}
                     </ul>
 
-                    <img className='img' src={Pokemon?.sprites?.front_default} alt="" />
+                    <img className='Pokedex-img' src={Pokemon?.sprites?.other?.home.front_default} alt="" />
     
                     <section className='section'>
                             <p>attack:

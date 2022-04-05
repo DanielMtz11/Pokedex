@@ -23,7 +23,7 @@ const Login = () => {
     const [userName, setUserName]=useState("");
 
     const size = window.screen.width;
-    console.log(size);
+    // console.log(size);
 
     const submit =(e)=>{
         e.preventDefault();
