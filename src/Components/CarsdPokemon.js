@@ -134,44 +134,50 @@ const CarsdPokemon = ({pokemonUrl}) => {
                     
                     <Link to ={`/Pokedex/${Pokemon.name}`} >
                     
-                    <section className='container-card'>
+                    <section className='container-card' >
                     <div className='cardPokemon' style={style} >
 
-                    <img className='Pokedex-img' src={Pokemon?.sprites?.other?.home.front_default} alt="" />
+                        <div className='card-fond'>
 
-    
-                    <p className='id'>{Pokemon.id}</p>
-                    <h2 className='name'>{Pokemon.name}</h2>
+                        </div>
+
+                        <div className='card-content'>
+                                    <img className='Pokedex-img' src={Pokemon?.sprites?.other?.home.front_default} alt="" />
+
                     
-                    <ul className='types-ul'>
-                            
-                        {Pokemon.types?.map(type =>(
-                            
-                            <li key={type.type?.url}>{type.type?.name}  </li>
-                            
-                            ))}
-                            {/* types */}
-                        
-                    </ul>
-                    <p>type</p>
-    
-                    <section className='section'>
-                            <p>hp:
-                                {Pokemon.stats?.[0].base_stat}
-                            </p>
-                            
-                            <p>attack:
-                                {Pokemon.stats?.[1].base_stat}
-                            </p>
-    
-                            <p>Defense:
-                                {Pokemon.stats?.[2].base_stat}
-                            </p>
-    
-                            <p>speed:
-                                {Pokemon.stats?.[5].base_stat}
-                            </p>
-                    </section>        
+                                    <h2 className='name'>{Pokemon.name}</h2>
+                                    
+                                    <ul className='types-ul'>
+                                            
+                                        {Pokemon.types?.map(type =>(
+                                            
+                                            <li key={type.type?.url}>{type.type?.name}  </li>
+                                            
+                                            ))}
+                                            {/* types */}
+                                        
+                                    </ul>
+                                    <p>type</p>
+                    
+                                    <section className='section-stats'>
+                                            <p><span>hP</span> <br />
+                                                {Pokemon.stats?.[0].base_stat}
+                                            </p>
+                                            
+                                            <p><span>attack</span><br />
+                                                {Pokemon.stats?.[1].base_stat}
+                                            </p>
+                    
+                                            <p><span>defense</span> <br />
+                                                {Pokemon.stats?.[2].base_stat}
+                                            </p>
+                    
+                                            <p><span>speed</span> <br />
+                                                {Pokemon.stats?.[5].base_stat}
+                                            </p>
+                                    </section> 
+                            </div>
+       
                     </div>
                     </section>
 

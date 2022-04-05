@@ -3,7 +3,8 @@ const INITIAL_STATE = {
     //propiedades que van a ser parte de este estado
     userName: "",
     isDark : false,
-    page : 1
+    page : 1,
+    Number :1
 
 
 }
@@ -27,6 +28,11 @@ const reducer = (state = INITIAL_STATE, action) => {
                 page: state.page -1
 
             }
+        case "SET_NUM-1":
+            return{
+                ...state,
+                Number : state.Number -1
+            }
         
         case "SET_PAGE+1":
                 return{
@@ -34,16 +40,36 @@ const reducer = (state = INITIAL_STATE, action) => {
                     page: state.page +1
                 }
         
+        case "SET_NUM+1":
+            return{
+                ...state,
+                Number : state.Number +1
+            }        
+
         case "SET_PAGE":
             return{
                 ...state,
                 page: action.payload
             }
         
+        case "SET_NUM":
+            return{
+                ...state,
+                Number: action.payload
+            }
+        
         case "RESET_PAGE":
             return{
                 ...state,
                 page :1
+            }
+        
+        
+
+        case "RESET_NUM":
+            return{
+                ...state,
+                Number :1
             }
 
     default:

@@ -27,7 +27,7 @@ const Pokedex = () => {
     const [types, setTypes]= useState([]);
     const [iteration, setIteration] = useState(1);
 
-    const[Number, setNumber] = useState(1);
+    // const[Number, setNumber] = useState(1);
 
     
     //para navegar a podexData
@@ -39,10 +39,12 @@ const Pokedex = () => {
 
     //*Desde la store...
     
-    const page = useSelector(state => state.page);
+    
     const userName = useSelector(state => state.userName);
     const isDark = useSelector(state => state.isDark);
-
+    
+    const page = useSelector(state => state.page);
+    const Number = useSelector(state => state.Number);
     const dispatch = useDispatch();//useDispatch sirve para ejecutar las acciones que se encuentran en el swicht de redux
 
 
@@ -128,6 +130,7 @@ const Pokedex = () => {
 
     const handleSelect=(e)=>{
         dispatch({type: "RESET_PAGE"})
+        dispatch({type: "RESET_NUM"})
         let urlTypes = e.target.value
         axios.get(urlTypes)
         .then(r => {
@@ -237,7 +240,8 @@ const Pokedex = () => {
 
                     <section className='sectionBtns'>
                             
-                        <button onClick={()=>{ dispatch({type: "SET_PAGE-1"})}}
+                        <button onClick={()=>{ dispatch({type: "SET_PAGE-1"})
+                                                dispatch({type: "SET_NUM-1"})}}
                                                 
                                                 // setPage(page-1)}}
                                 disabled={page<=1}>
@@ -247,7 +251,8 @@ const Pokedex = () => {
                         <p>
                             <span> {page }</span> / {totalPage}
                         </p>
-                        <button onClick={()=>dispatch({type: "SET_PAGE+1"})}
+                        <button onClick={()=>{dispatch({type: "SET_PAGE+1"})
+                                                dispatch({type: "SET_NUM+1"})}}
                                 disabled={page >=totalPage}>
                                 <img src={next} alt="" />
                         </button>
@@ -286,7 +291,10 @@ const Pokedex = () => {
                                                             dispatch({type: "SET_PAGE",
                                                                         payload: num})
                                                             // setPage(num);
-                                                            setNumber(num)}} 
+
+                                                            dispatch({ type: "SET_NUM",
+                                                                        payload: num})
+                                                                    }} 
                                                             key={num}>
                                                     {num} 
                                     </button>
