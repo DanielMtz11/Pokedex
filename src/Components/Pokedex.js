@@ -52,12 +52,20 @@ const Pokedex = () => {
 
 
 
+    //Mostraremos solo 6 items por pagina
+            let items;
     
             //* Codigo para la paginacion 
-    
+            const size = window.screen.width;
+                if(size <1024){
+                    items = 6;
+                }
 
-            //Mostraremos solo 6 items por pagina
-            const items= 6;
+                else{
+                    items = 9;
+                }
+
+
 
             //lastIndex determina el ultimo indice de cada pagina 
             //firstIndex determina el primer indice de cada pagina
