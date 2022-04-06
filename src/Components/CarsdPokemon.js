@@ -181,7 +181,7 @@ const CarsdPokemon = ({pokemonUrl}) => {
                                                                         "gray"
                                                                     ):(
                                                                         type ==='ice'?(
-                                                                        "#6FBEDF"
+                                                                        "#007455"
                                                                         ):(
                                                                             type === 'dragon'?(
                                                                                 "#478A93"
