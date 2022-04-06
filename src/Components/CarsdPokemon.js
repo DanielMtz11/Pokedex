@@ -33,7 +33,7 @@ const CarsdPokemon = ({pokemonUrl}) => {
         const style ={
                     background: type==='normal'?
                             (
-                                "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(153,110,8,0.8379726890756303) 91%)"
+                                "linear-gradient(212deg, rgba(110,7,7,0.7511379551820728) 9%, rgba(252,176,69,1) 100%)"
                             ):(    
                                 type ==='fighting'?
                                 (
@@ -49,7 +49,7 @@ const CarsdPokemon = ({pokemonUrl}) => {
                                           
                                         ):(
                                             type === 'fire'?(
-                                                "linear-gradient(0deg, rgba(230,88,12,0.8155637254901961) 32%, rgba(246,20,0,1) 99%)"
+                                                "linear-gradient(212deg, rgba(253,29,29,1) 9%, rgba(252,176,69,1) 100%)"
 
                                             ):(
                                                 type ==='ground'?(
@@ -87,7 +87,7 @@ const CarsdPokemon = ({pokemonUrl}) => {
                                                                                 "linear-gradient(63deg, rgba(247,231,147,0.9304096638655462) 19%, rgba(116,86,0,1) 97%)"
                                                                             ):(
                                                                                 type ==='ice'?(
-                                                                                "  linear-gradient(71deg, rgba(98,172,222,1) 19%, rgba(36,23,138,1) 97%)"
+                                                                                "linear-gradient(63deg, rgba(11,56,84,0.9304096638655462) 19%, rgba(0,116,85,1) 97%)"
                                                                                 ):(
                                                                                     type === 'dragon'?(
                                                                                         "linear-gradient(179.75deg, #478A93 -19.96%, #56A4AE 43.67%, #A2BEC1 138.4%)"
