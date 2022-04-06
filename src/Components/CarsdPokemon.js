@@ -33,7 +33,7 @@ const CarsdPokemon = ({pokemonUrl}) => {
         const style ={
                     background: type==='normal'?
                             (
-                                "linear-gradient(212deg, rgba(110,7,7,0.7511379551820728) 9%, rgba(252,176,69,1) 100%)"
+                                "linear-gradient(212deg, rgba(27,10,9,0.6867121848739496) 10%, rgba(255,239,147,1) 99%)"
                             ):(    
                                 type ==='fighting'?
                                 (
