@@ -174,7 +174,7 @@ const CarsdPokemon = ({pokemonUrl}) => {
                                                                     
                                                                 ):(
                                                                     type === 'electric'?(
-                                                                       
+                                                                    
                                                                         "#153755"
                                                                     ):(
                                                                     type === 'psychic'?(
