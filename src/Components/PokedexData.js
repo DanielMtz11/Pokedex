@@ -69,7 +69,7 @@ const PokedexData = () => {
                                                             
                                                         ):(
                                                             type  === 'grass'?(
-                                                                "linear-gradient(178.92deg, #7EC6C5 90.92%, #ABDAC6 7.96%, #CAE099 0.08%)"
+                                                                "linear-gradient(156deg, rgba(32,89,125,0.9304096638655462) 19%, rgba(15,245,184,0.6951155462184874) 83%)"
                                                             ):(
                                                                 type === 'electric'?(
                                                                     "linear-gradient(333deg, rgba(12,37,59,1) 15%, rgba(19,131,204,1) 97%)"
@@ -125,7 +125,7 @@ const PokedexData = () => {
 
     
 
-        // console.log(pokemon)
+        console.log(pokemon)
 
 
 
@@ -136,10 +136,17 @@ const PokedexData = () => {
             </section >
                 
             <section className='content-pokedexData'>
+                <p className='id'>#{pokemon.id}</p>
                 <div className='container-imgData'>
-                    <img className='pokedexData-img' src={pokemon.sprites?.other.dream_world.front_default} alt="" />
+                    {/* <img className='pokedexData-img' src={pokemon.sprites?.other.dream_world.front_default} alt="" /> */}
+                    <img className='pokedexData-img' src={pokemon?.sprites?.other?.home.front_default} alt="" />
                 </div>
-                    <p>{pokemon.name}</p>
+                    <h2>{pokemon.name}</h2>
+
+                    {pokemon.types?.map(type =>(
+                        <h3 key={type.type.url}>{type.type.name}</h3>
+                        // console.log(type.type.name)
+                    ))}
 
                     <section className='content-pokedexData-abilities'>
                         abilities:

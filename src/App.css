@@ -7,8 +7,11 @@
   box-sizing: border-box;
 }
 
+
+
   body {
     height: 100vh;
+    font-family: 'Roboto Mono', monospace;
   }
   
   .App {
@@ -18,7 +21,6 @@
 }
 
 .container-login{
-  font-family: 'Roboto Mono', monospace;
   width: 100%;
   height: 100vh;
   position: relative;
@@ -181,7 +183,6 @@
 
 .containerPokedex{
   padding-top: 100px;
-  font-family: 'Roboto Mono', monospace;
   position: relative;
 }
 
@@ -258,7 +259,7 @@
 .select > select {
 	appearance: none;
 	background-color: #fff;
-	border: 0 !important;
+	/* border: 0 !important; */
 	color: #827777;
 	cursor: pointer;
 	font-size: 1rem;
@@ -509,7 +510,7 @@ line-height: 30px;
   .container-pokedexData{
     position: relative;
     height: 100vh;
-    background-color: #827777;
+    background-color: whitesmoke;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -526,6 +527,7 @@ line-height: 30px;
     /* right: 0; */
     width: 100%;
     top: -50px;
+    opacity: 97%;
   }
 
 
@@ -536,9 +538,20 @@ line-height: 30px;
     /* height: 100%; */
     width: 100%;
     padding-top: 192px;
+    font-size: 22px;
+
   }
+
+  .id{
+    position: absolute;
+    top: -82px;
+    right: 15px;
+    color: whitesmoke;
+    font-size: 20px;
+  }
+
   .pokedexData-img {
-    width: 200px;
+    width: 220px;
     position: absolute;
     top: -60px;
   }
@@ -547,8 +560,14 @@ line-height: 30px;
     display: flex;
     justify-content: center;
   }
- 
- 
+  .content-pokedexData>h2{
+    font-size: 32px;
+    padding: 5px;
+  }
+
+  .content-pokedexData>p , .content-pokedexData>h2{
+    text-align: center;
+  }
 
 
 

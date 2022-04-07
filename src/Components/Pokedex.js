@@ -121,7 +121,7 @@ const Pokedex = () => {
 
     },[])
 
-    console.log(page)
+    // console.log(page)
 
 
     const Submit=(e)=>{
@@ -177,7 +177,7 @@ const Pokedex = () => {
 
     handleTypes();
 
-    console.log(`num : ${Number}`)
+    // console.log(`num : ${Number}`)
 
     return (
         <>

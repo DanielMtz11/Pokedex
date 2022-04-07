@@ -228,7 +228,7 @@ const CarsdPokemon = ({pokemonUrl}) => {
 
 
 
-        console.log(Pokemon);
+        // console.log(Pokemon);
 
 
         // Pokemon.types?.map(type =>{
