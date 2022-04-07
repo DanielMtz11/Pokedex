@@ -542,12 +542,18 @@ line-height: 30px;
 
   }
 
-  .id{
+  .id {
     position: absolute;
     top: -82px;
-    right: 15px;
+    left: 12px;
     color: whitesmoke;
-    font-size: 20px;
+    font-size: 25px;
+    /* padding: 9px; */
+    /* background: rebeccapurple; */
+    padding: 6px 12px;
+    border-radius: 12px;
+    opacity: 97%;
+
   }
 
   .pokedexData-img {
@@ -574,16 +580,33 @@ line-height: 30px;
 
 
   .container-types>h3{
-    padding: 10px 25px;
+    padding: 10px 25px 12px;
     /* margin: 20px ; */
     color: whitesmoke;
     border-radius: 20px;
+
   }
 
-  .content-pokedexData>p , .content-pokedexData>h2{
+  .content-pokedexData>h2{
     text-align: center;
+    font-size: 38px;
   }
 
+  .container-p{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 45px;
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  .container-p>p{
+    font-size: 30px;
+  }
+
+  .container-p>p>span{
+    font-size: 20px;
+  }
 
 
 

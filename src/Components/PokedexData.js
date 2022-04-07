@@ -137,7 +137,7 @@ const PokedexData = () => {
             </section >
                 
             <section className='content-pokedexData'>
-                <p className='id'>#{pokemon.id}</p>
+                <p style={style} className='id'>#{pokemon.id}</p>
                 <div className='container-imgData'>
                     {/* <img className='pokedexData-img' src={pokemon.sprites?.other.dream_world.front_default} alt="" /> */}
                     <img className='pokedexData-img' src={pokemon?.sprites?.other?.home.front_default} alt="" />
@@ -191,16 +191,31 @@ const PokedexData = () => {
                         ))}
                 </div>
 
-
-                    <p>height: {pokemon.height/10}</p>
-                    <p>weight: {pokemon.weight/10}</p>
-
-                    <section className='content-pokedexData-abilities'>
-                        abilities:
-                    <p> {pokemon.abilities?.[0].ability.name}</p>
-                    <p>{pokemon.abilities?.[1].ability.name}</p>
-
-                    </section>
+                        <div className='container-p'>
+                        <p>{pokemon.height/10}M <br /> <span> height</span> </p>
+                        <p> {pokemon.weight/10}Kg <br /><span> Weight</span></p>
+                    </div>
+                        
+                    <section className='section-statsData'>
+                                    
+                                            <p ><span>hP</span> <br />
+                                                <progress max="170" value={pokemon.stats?.[0].base_stat}></progress>
+                                                
+                                            </p>
+                                            
+                                            <p ><span>attack</span><br />
+                                                <progress max="170" value={pokemon.stats?.[1].base_stat}></progress>
+                                                
+                                            </p>
+                    
+                                            <p ><span>defense</span> <br />
+                                                <progress max="170" value= {pokemon.stats?.[2].base_stat}></progress>
+                                            </p>
+                    
+                                            <p ><span>speed</span> <br />                                            
+                                                <progress max="170" value= {pokemon.stats?.[5].base_stat}></progress>
+                                            </p>
+                                    </section> 
 
                                 </section>
 
