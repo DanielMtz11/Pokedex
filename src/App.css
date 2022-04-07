@@ -565,6 +565,21 @@ line-height: 30px;
     padding: 5px;
   }
 
+  .container-types{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    padding: 25px;
+  }
+
+
+  .container-types>h3{
+    padding: 10px 25px;
+    /* margin: 20px ; */
+    color: whitesmoke;
+    border-radius: 20px;
+  }
+
   .content-pokedexData>p , .content-pokedexData>h2{
     text-align: center;
   }
