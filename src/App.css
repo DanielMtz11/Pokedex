@@ -542,6 +542,7 @@ line-height: 30px;
     width: 100%;
     padding-top: 192px;
     font-size: 22px;
+    text-transform: capitalize;
 
   }
 
@@ -622,6 +623,9 @@ progress {
 }
 
 
+
+
+
 /* ::-webkit-progress-inner-element {
   border: 2px solid black;
 } */
@@ -672,17 +676,38 @@ progress {
 
 .container-abilities {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   /* margin: 0 auto; */
   /* flex-direction: column; */
   align-items: center;
-  gap: 55px;
+  /* gap: 55px; */
   list-style: none;
+  margin: 20px 0;
+  width: 100%;
 }
 
 .abilities {
   text-align: center;
   padding: 30px 0 20px;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+
+.container-abilities > li {
+	font-size: 15px;
+	border: 1px solid rgb(159, 133, 133);
+	padding: 10px 8px;
+	/* border: ; */
+	border-radius: 20px;
+	/* margin: 20px; */
+  box-shadow:  2px 2px 8px;
+}
+
+@media(min-width:420px ){
+  .abilities {   font-size: 26px; }
+
+  .container-abilities > li {font-size: 20px;}
 }
 
 
