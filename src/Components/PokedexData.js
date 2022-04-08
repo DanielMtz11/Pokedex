@@ -203,16 +203,16 @@ const PokedexData = () => {
                                                 
                                             </p>
                                             
-                                            <p className='second' ><span>atk </span>
+                                            <p className='second' ><span>atk</span>
                                                 <progress  max="170" value={pokemon.stats?.[1].base_stat}></progress>
                                                 
                                             </p>
                     
-                                            <p className='third' ><span>def </span> 
+                                            <p className='third' ><span>def</span> 
                                                 <progress max="170" value= {pokemon.stats?.[2].base_stat}></progress>
                                             </p>
                     
-                                            <p className='Fourth' ><span>spd </span>                                            
+                                            <p className='fourth' ><span>spd</span>                                            
                                                 <progress max="170" value= {pokemon.stats?.[5].base_stat}></progress>
                                             </p>
                             </section> 

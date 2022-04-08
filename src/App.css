@@ -615,6 +615,7 @@ progress {
   -webkit-appearance: none;
   border-radius: 30px;
   width: 270px;
+  height: 100%;
 
 }
 
@@ -629,7 +630,7 @@ progress {
 
 ::-webkit-progress-bar,  ::-webkit-progress-value{
   border-radius: 30px;
-  height: 25px;  
+  height: 30px;  
   width: auto;
 }
 
@@ -641,23 +642,15 @@ progress {
   background-color:  green;
 }
 
-.first {
+.first, .second, .third, .fourth{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 27px;
+  gap: 15px;
 }
 
-.section-statsData {
-  width: 350px;
-  margin: 10px auto;
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  align-items: flex-start;
-  padding: 50px 28px;
-  /* padding: 90px; */
-  line-height: 40px;
+.first{
+  gap: 27px;
 }
 
 .section-statsData {
@@ -669,7 +662,7 @@ progress {
   align-items: flex-start;
   padding: 48px 10px;
   /* padding: 90px; */
-  line-height: 40px;
+  line-height: 50px;
 }
 
 @media(min-width: 768px){
