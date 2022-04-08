@@ -217,6 +217,22 @@ const PokedexData = () => {
                                             </p>
                             </section> 
 
+
+                        <div>
+                                <p className='abilities'>Abilities</p>
+
+                            <ul className=' container-abilities'>
+                                {
+                                    pokemon.abilities?.map( ability =>(
+                                    <li key={ability.ability.name}>{ability.ability?.name}</li>
+                                    // console.log( ability.ability.name)
+                                    ))
+                                    
+                                }
+                            
+                            </ul>
+                        </div>
+
                     </section>
 
 
