@@ -670,6 +670,7 @@ progress {
   width: auto;
   background-color: #b9b9b9
 }
+
 .first>::-webkit-progress-value{
   background: linear-gradient(58deg, rgb(179, 144, 204) 13%, rgba(96,20,97,1) 99%);
 }
@@ -870,9 +871,18 @@ progress {
   justify-content: center;
   gap: 127px;}
 
-  .first, .second, .third, .fourth {
+  ::-webkit-progress-bar,  ::-webkit-progress-value{
+    height: 35px;  
+  }
+
+.first, .second, .third, .fourth {
    width: 500px;
 }
+.first, .second, .third, .fourth {
+  max-width:  700px;
+  width: 600px;
+}
+
   }
   @media(min-width: 1200px){
     .containerCard{
