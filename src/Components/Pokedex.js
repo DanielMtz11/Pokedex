@@ -106,7 +106,7 @@ const Pokedex = () => {
     
 
     useEffect(()=>{
-        axios.get("https://pokeapi.co/api/v2/pokemon?limit=1000&offset=0")
+        axios.get("https://pokeapi.co/api/v2/pokemon?limit=2000&offset=0")
         .then(r => {
                     setPokemons(r.data.results)
                     // console.log("POKemons:")

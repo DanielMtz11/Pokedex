@@ -196,28 +196,28 @@ const PokedexData = () => {
                         <p> {pokemon.weight/10}Kg <br /><span> Weight</span></p>
                     </div>
                         
-                    <section className='section-statsData'>
+                            <section className='section-statsData'>
                                     
-                                            <p ><span>hP</span> <br />
-                                                <progress max="170" value={pokemon.stats?.[0].base_stat}></progress>
+                                            <p className='first'><span>hP </span> 
+                                                <progress  max="170" value={pokemon.stats?.[0].base_stat}></progress>
                                                 
                                             </p>
                                             
-                                            <p ><span>attack</span><br />
-                                                <progress max="170" value={pokemon.stats?.[1].base_stat}></progress>
+                                            <p className='second' ><span>atk </span>
+                                                <progress  max="170" value={pokemon.stats?.[1].base_stat}></progress>
                                                 
                                             </p>
                     
-                                            <p ><span>defense</span> <br />
+                                            <p className='third' ><span>def </span> 
                                                 <progress max="170" value= {pokemon.stats?.[2].base_stat}></progress>
                                             </p>
                     
-                                            <p ><span>speed</span> <br />                                            
+                                            <p className='Fourth' ><span>spd </span>                                            
                                                 <progress max="170" value= {pokemon.stats?.[5].base_stat}></progress>
                                             </p>
-                                    </section> 
+                            </section> 
 
-                                </section>
+                    </section>
 
 
                     
