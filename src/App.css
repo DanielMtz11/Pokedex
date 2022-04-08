@@ -87,6 +87,12 @@
   width: 100%;
 }
 
+.footer-pokedexData{
+  /* position: absolute;
+	bottom: 0; */
+  width: 100%;
+}
+
 .top {
 	position: absolute;
 	top: 0;
@@ -99,6 +105,12 @@
   height: 100px;  
   background-color: #DD1A1A;
   }
+
+.footer-pokedexData>.red{
+  height: 50px;  
+  background-color: #DD1A1A;
+}
+
 
   .top>.red-top{
     height: 60px;
@@ -115,6 +127,11 @@
     background-color: black;
     }
 
+    .footer-pokedexData>.black{
+    height: 30px;  
+    background-color: black;
+    }
+  
   .btn{
     cursor: pointer;
   }
@@ -673,6 +690,9 @@ progress {
   line-height: 50px;
 }
 
+.wrapper-abilities{
+  padding-bottom: 20px;
+}
 
 .container-abilities {
   display: flex;

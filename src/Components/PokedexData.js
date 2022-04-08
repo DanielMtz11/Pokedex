@@ -131,6 +131,8 @@ const PokedexData = () => {
 
 
     return (
+        <>
+        
         <div className='container-pokedexData'>
             <section style={style} className='fond-pokedexData'>
 
@@ -218,7 +220,7 @@ const PokedexData = () => {
                             </section> 
 
 
-                        <div>
+                        <div className='wrapper-abilities'>
                                 <p className='abilities'>Abilities</p>
 
                             <ul className=' container-abilities'>
@@ -233,6 +235,15 @@ const PokedexData = () => {
                             </ul>
                         </div>
 
+                                            
+                        <section className='footer-pokedexData'>
+                        <div className='red'>
+
+                        </div>
+
+                        <div className='black'></div>
+                        
+                    </section>
                     </section>
 
 
@@ -241,6 +252,8 @@ const PokedexData = () => {
 
 
         </div>
+
+        </>
     );
 };
 
