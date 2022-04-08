@@ -135,11 +135,12 @@ const PokedexData = () => {
         
         <div className='container-pokedexData'>
             <section style={style} className='fond-pokedexData'>
+            <p style={style} className='id'>#{pokemon.id}</p>
 
             </section >
                 
             <section className='content-pokedexData'>
-                <p style={style} className='id'>#{pokemon.id}</p>
+                {/* <p style={style} className='id'>#{pokemon.id}</p> */}
                 <div className='container-imgData'>
                     {/* <img className='pokedexData-img' src={pokemon.sprites?.other.dream_world.front_default} alt="" /> */}
                     <img className='pokedexData-img' src={pokemon?.sprites?.other?.home.front_default} alt="" />

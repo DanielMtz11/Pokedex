@@ -525,17 +525,18 @@ line-height: 30px;
 
   /**Estilos para los datos de cada pokemon*/
 
-
-  .container-pokedexData{
+  .container-pokedexData {
     position: relative;
     height: 100vh;
     background-color: whitesmoke;
     display: flex;
     flex-direction: column;
     width: 100%;
+    align-items: center;
     /* padding: 45px; */
+}
 
-  }
+
 
 
   .fond-pokedexData {
@@ -565,17 +566,18 @@ line-height: 30px;
 
   .id {
     position: absolute;
-    top: -82px;
-    left: 12px;
+    /* top: 0; */
+    bottom: 212px;
+    /* left: 11px; */
     color: whitesmoke;
     font-size: 25px;
     /* padding: 9px; */
     /* background: rebeccapurple; */
-    padding: 6px 12px;
+    padding: 12px 24px;
     border-radius: 12px;
     opacity: 97%;
-
-  }
+    z-index: 400;
+}
 
   .pokedexData-img {
     width: 240px;
@@ -837,9 +839,23 @@ progress {
     }
 
     
-  
+    .fond-pokedexData {
+      max-width: 900px;
   }
+  .pokedexData-img {
+    width: 289px;
+    position: absolute;
+    top: -119px;
+}
 
+.container-abilities {
+  justify-content: center;
+  gap: 127px;}
+
+  .first, .second, .third, .fourth {
+   width: 500px;
+}
+  }
   @media(min-width: 1200px){
     .containerCard{
       margin: 0 50px;
