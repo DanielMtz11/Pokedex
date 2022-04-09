@@ -242,7 +242,8 @@
   font-size: 28px;
   font-weight: bold;
   text-transform: capitalize;
-  color: #DD1A1A;
+  /* color: #DD1A1A; */
+  color: rgb(150, 91, 91);
   display: block;
 }
 
@@ -259,17 +260,17 @@
 }
 
 .select::after {
-	background-color: #DD1A1A;
-	color: #f0f8ff;
+  color: #241d1d;
 	content: "▼";
 	cursor: pointer;
-	height: 35px;
+	height: 45px;
 	padding: 7px 2px 8px 14px;
 	pointer-events: none;
 	position: absolute;
 	right: 0;
-	top: 0;
+	top: -4px;
 	width: 27px;
+  font-size: 25px;
 }
 
 
@@ -349,40 +350,24 @@ width: 300px;
   justify-content: center;
 }
 
-
 .sectionBtns > button {
 	border: none;
 	width: 50px;
 	cursor: pointer;
 	background: whitesmoke;
 	margin: -2px;
-	padding: 2px 0;
+	padding: 5px 0px;
+	border-radius: 20px;
 }
 
+
 .sectionBtns > p {
-  padding: 3px;
+  padding: 5px 10px;
 }
 
 .sectionBtns > p> span {
-color: #DD1A1A;
+/* color: #DD1A1A; */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 a{ text-decoration: none;}
 
@@ -516,7 +501,7 @@ line-height: 30px;
     /* padding: 10px; */
   }
   .sectionPagination>button{
-    background-color:#DD1A1A;
+    /* background-color:#DD1A1A; */
     font-size: 20px;
     align-items: center;
     padding-bottom: 5px;

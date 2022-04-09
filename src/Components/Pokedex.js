@@ -179,6 +179,8 @@ const Pokedex = () => {
 
     // console.log(`num : ${Number}`)
 
+
+    
     return (
         <>
 
@@ -210,7 +212,7 @@ const Pokedex = () => {
                     <img src={isDark? whitemod : darkmod} alt="" />
                 </button>
 
-                <p className='welcome'> <span>welcome {userName}</span> here you can find your favorite pokemon </p>
+                <p className='welcome' style={{color: isDark? "gray": "black"} } > <span style={{color: isDark? "#964131": "#DD1A1A"}}>welcome {userName}</span> here you can find your favorite pokemon </p>
 
                 <section className='inputs'> 
 
@@ -256,8 +258,8 @@ const Pokedex = () => {
                                 <img src={back} alt="" />
                         </button>
         
-                        <p>
-                            <span> {page }</span> / {totalPage}
+                        <p style={{color: isDark? "gray": "black"} }>
+                            <span style={{color: isDark? "#964131": "#DD1A1A"}}> {page }</span> / {totalPage}
                         </p>
                         <button onClick={()=>{dispatch({type: "SET_PAGE+1"})
                                                 dispatch({type: "SET_NUM+1"})}}
@@ -287,7 +289,7 @@ const Pokedex = () => {
 
                     <section className='sectionPagination'>
 
-                        <button style={{backgroud: "black"}} onClick={()=>{
+                        <button style={{  background: isDark? "#964131": "#DD1A1A"}} onClick={()=>{
                                                 setIteration(iteration-1)}}
                                                 disabled={ iteration<=1}>
                                 «
@@ -295,7 +297,7 @@ const Pokedex = () => {
                         <div>
                             {
                                 showPage.map( num =>(
-                                    <button style={{background : num===Number? "#DD1A1A": "rgb(44, 42, 42)" }} onClick={()=>{
+                                    <button style={{background : num===Number?(isDark? ("#964131"):( "#DD1A1A")): ("rgb(44, 42, 42)") }} onClick={()=>{
                                                             dispatch({type: "SET_PAGE",
                                                                         payload: num})
                                                             // setPage(num);
@@ -314,7 +316,7 @@ const Pokedex = () => {
 
                         </div>
                                 
-                        <button onClick={()=> setIteration(iteration+1)}
+                        <button style={{  background: isDark? "#964131": "#DD1A1A"}} onClick={()=> setIteration(iteration+1)}
                                 disabled ={iteration >=totalShowPage }>
                                 »
                         </button>
