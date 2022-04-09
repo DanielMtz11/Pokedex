@@ -66,7 +66,7 @@
 	width: 61px;
 	border: none;
 	cursor: pointer;
-	background: #DD1A1A;
+	/* background: #DD1A1A; */
 	border-radius: 16px;
 	color: whitesmoke;
 	font-size: 15px;
@@ -187,7 +187,7 @@
 
 
     .greet>h2 {
-      color: #DD1A1A;
+      /* color: #DD1A1A; */
       font-weight: bold;
     }
 
@@ -842,6 +842,10 @@ progress {
       gap: 30px;
     }
 
+    .welcome > span {
+      line-height: 55px;
+      font-size: 34px;
+    }
     
     .fond-pokedexData {
       max-width: 900px;

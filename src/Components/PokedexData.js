@@ -1,5 +1,6 @@
 import React from 'react';
 import{ useParams} from 'react-router-dom'
+import {useSelector} from 'react-redux'
 import { useEffect } from 'react';
 import axios from 'axios';
 import { useState } from 'react';
@@ -12,6 +13,7 @@ const PokedexData = () => {
 
     const [pokemon , setPokemon]= useState({})
 
+    const isDark = useSelector(state => state.isDark);
 
     useEffect(()=>{
         axios.get(`https://pokeapi.co/api/v2/pokemon/${Name}/`)
@@ -133,13 +135,13 @@ const PokedexData = () => {
     return (
         <>
         
-        <div className='container-pokedexData'>
+        <div style={{background:isDark? "#222122":"white" }} className='container-pokedexData'>
             <section style={style} className='fond-pokedexData'>
             <p style={style} className='id'>#{pokemon.id}</p>
 
             </section >
                 
-            <section className='content-pokedexData'>
+            <section style={{color:isDark? "whitesmoke": "dark"}} className='content-pokedexData'>
                 {/* <p style={style} className='id'>#{pokemon.id}</p> */}
                 <div className='container-imgData'>
                     {/* <img className='pokedexData-img' src={pokemon.sprites?.other.dream_world.front_default} alt="" /> */}

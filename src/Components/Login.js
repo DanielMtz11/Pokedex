@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import {useDispatch} from 'react-redux';
+import {useSelector,useDispatch} from 'react-redux';
 import {useNavigate} from 'react-router-dom';
 import elipse from '../img/Ellipse.png'
 import elipse2 from '../img/Ellipse2.png'
@@ -25,6 +25,8 @@ const Login = () => {
     const size = window.screen.width;
     // console.log(size);
 
+    const isDark = useSelector(state => state.isDark);
+
     const submit =(e)=>{
         e.preventDefault();
         // console.log(name);
@@ -48,8 +50,8 @@ const Login = () => {
 
                 <section  className='greet'>
 
-                <h2>Hello Trainer !</h2>
-                <p>Give me your name to start</p>
+                <h2 style={{color: isDark? "#964131": "#DD1A1A"}}>Hello Trainer !</h2>
+                <p style={{color: isDark? "gray": "black"} }>Give me your name to start</p>
                 </section>
 
                 <form onSubmit={submit} className="search-container">
@@ -59,7 +61,7 @@ const Login = () => {
                             onChange={e=>setUserName(e.target.value)}
                             value={userName}
                             required/>
-                    <button className='search-icon' >Go
+                    <button style={{background: isDark? "#964131": "#DD1A1A"}}  className='search-icon' >Go
                             {/* <img src={pokeball} alt="" /> */}
                     </button>
                 </form>
