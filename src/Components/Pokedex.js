@@ -110,7 +110,7 @@ const Pokedex = () => {
         axios.get("https://pokeapi.co/api/v2/pokemon?limit=2000&offset=0")
         .then(r => {
                     setPokemons(r.data.results)
-                    setIsLoading(!isLoading);
+                    setIsLoading(false);
                     // console.log("POKemons:")
                     // console.log(r.data.results)
                     })
@@ -121,7 +121,7 @@ const Pokedex = () => {
                     setTypes(r.data.results)
                 })
 
-    },[])
+    },[isLoading])
 
     // console.log(page)
 
