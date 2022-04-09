@@ -130,7 +130,7 @@ const Pokedex = () => {
 
         const lowerCaseNameorId =NameOrId.toLowerCase()
         // NameOrId.toUpperCase();
-        console.log(lowerCaseNameorId)
+        // console.log(lowerCaseNameorId)
         Navigate(`/pokedex/${lowerCaseNameorId}`)
     }
 
