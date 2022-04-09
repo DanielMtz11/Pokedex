@@ -135,7 +135,7 @@ const PokedexData = () => {
     return (
         <>
         
-        <div style={{background:isDark? "#222122":"white" }} className='container-pokedexData'>
+        <div style={{background:isDark? "#222122":"whitesmoke" }} className='container-pokedexData'>
             <section style={style} className='fond-pokedexData'>
             <p style={style} className='id'>#{pokemon.id}</p>
 
