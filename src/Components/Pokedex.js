@@ -121,7 +121,7 @@ const Pokedex = () => {
                     setTypes(r.data.results)
                 })
 
-    },[isLoading])
+    },[])
 
     // console.log(page)
 
