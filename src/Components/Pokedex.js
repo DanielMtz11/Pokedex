@@ -27,6 +27,7 @@ const Pokedex = () => {
     const [types, setTypes]= useState([]);
     const [iteration, setIteration] = useState(1);
 
+    const [isLoading, setIsLoading]= useState(true);
     // const[Number, setNumber] = useState(1);
 
     
@@ -109,6 +110,7 @@ const Pokedex = () => {
         axios.get("https://pokeapi.co/api/v2/pokemon?limit=2000&offset=0")
         .then(r => {
                     setPokemons(r.data.results)
+                    // setIsLoading(!isLoading);
                     // console.log("POKemons:")
                     // console.log(r.data.results)
                     })
@@ -179,11 +181,20 @@ const Pokedex = () => {
 
     // console.log(`num : ${Number}`)
 
+    // console.log(isLoading);
 
-    
+    if(isLoading){
+        return(
+            <div className='container-loading'>
+
+            <p>Loading...</p>
+            </div>
+        )
+    }
+
+
     return (
         <>
-
         
                 <section className='top'>
                     <div className='red-top'></div>

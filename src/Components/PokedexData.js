@@ -17,12 +17,16 @@ const PokedexData = () => {
 
     const [ error, setError]=useState(false);
 
+    const [isLoading, setIsLoading]= useState(true);
+
+
     useEffect(()=>{
         axios.get(`https://pokeapi.co/api/v2/pokemon/${Name}/`)
-        .then(r=> setPokemon(r.data))
+        .then(r=> {setPokemon(r.data)
+                    setIsLoading(!isLoading)})
         .catch( error =>{
                 setError(true)
-                // console.log(error)
+                console.log(error)
             // <p>
             //     UPS SOMETIME WAS WRONT {error}
             // </p>
@@ -141,9 +145,25 @@ const PokedexData = () => {
 
     
 
-        console.log(pokemon)
+        // console.log(pokemon)
 
-    if(error !== true){
+        if(error){
+            return (
+    
+                <p>Sometime went wrong</p>
+            )
+        }
+    
+        else if(isLoading){
+                return(
+                    <div className='container-loading'>
+
+                    <p>Loading...</p>
+                    </div>
+                )
+            }
+
+    
         return (
             <>
             
@@ -270,14 +290,9 @@ const PokedexData = () => {
 
             </>
         );
-    }
     
-    else{
-        return (
-
-            <p>Sometime went wrong</p>
-        )
-    }
+    
+    
 };
 
 export default PokedexData;

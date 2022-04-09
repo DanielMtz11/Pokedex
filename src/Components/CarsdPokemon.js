@@ -9,13 +9,12 @@ const CarsdPokemon = ({pokemonUrl}) => {
 
     const [Pokemon, setPokemon]= useState({})
 
-
     // console.log( `types from cards: `)
     // console.log(types)
 
     useEffect(()=>{
         axios.get(pokemonUrl)
-        .then(r=> {setPokemon(r.data)
+        .then(r=> { setPokemon(r.data)
                     })
 
     },[pokemonUrl])
@@ -225,6 +224,7 @@ const CarsdPokemon = ({pokemonUrl}) => {
 
 
 }
+
 
 
 
