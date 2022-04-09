@@ -23,7 +23,7 @@ const PokedexData = () => {
     useEffect(()=>{
         axios.get(`https://pokeapi.co/api/v2/pokemon/${Name}/`)
         .then(r=> {setPokemon(r.data)
-                    setIsLoading(!isLoading)})
+                    setIsLoading(false)})
         .catch( error =>{
                 setError(true)
                 console.log(error)
