@@ -731,7 +731,7 @@ progress {
 .container-loading, .error{
   width: 100%;
   height: 100vh;
-  background-color: #241d1d;
+  /* background-color: #241d1d; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -756,8 +756,8 @@ progress {
 
 .container-loading>p, .error>p{
   text-align: center;
-  font-size: 22px;
-  color: whitesmoke;
+  font-size: 24px;
+  /* color: whitesmoke; */
 }
 
 .backHome {

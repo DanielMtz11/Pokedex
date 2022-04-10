@@ -185,7 +185,7 @@ const Pokedex = () => {
 
     if(isLoading){
         return(
-            <div className='container-loading'>
+            <div className='container-loading' style={{background: isDark? "#241d1d": "linear-gradient(180deg, rgba(191,191,191,1) 0%, rgba(80,78,78,1) 99%)", color:isDark? "whitesmoke":"dark"}}>
 
             <p>Loading...</p>
             </div>
