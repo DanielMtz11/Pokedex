@@ -223,7 +223,7 @@ const Pokedex = () => {
                     <img src={isDark? whitemod : darkmod} alt="" />
                 </button>
 
-                <p className='welcome' style={{color: isDark? "gray": "black"} } > <span style={{color: isDark? "#964131": "#DD1A1A"}}>welcome {userName}</span> here you can find your favorite pokemon </p>
+                <p className='welcome' style={{color: isDark? "gray": "black"} } > <span style={{color: isDark? "#ea6565": "#DD1A1A"}}>welcome {userName}</span> here you can find your favorite pokemon </p>
 
                 <section className='inputs'> 
 

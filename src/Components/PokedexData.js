@@ -4,12 +4,14 @@ import {useSelector} from 'react-redux'
 import { useEffect } from 'react';
 import axios from 'axios';
 import { useState } from 'react';
+import pokeball from '../img/pokebola.png'
+import {useNavigate} from 'react-router-dom'
+
 
 const PokedexData = () => {
 
 
     const { Name } =useParams();
-
 
     const [pokemon , setPokemon]= useState({})
 
@@ -19,6 +21,7 @@ const PokedexData = () => {
 
     const [isLoading, setIsLoading]= useState(true);
 
+    const navigate = useNavigate();
 
     useEffect(()=>{
         axios.get(`https://pokeapi.co/api/v2/pokemon/${Name}/`)
@@ -150,7 +153,20 @@ const PokedexData = () => {
         if(error){
             return (
     
-                <p>Sometime went wrong</p>
+            <div className='error'>
+
+                <p>Something went wrong :(</p>
+                
+
+                <span className='_404'>
+                    4<img src={pokeball} alt="" />4
+                </span>
+                {/* <p>{error}</p> */}
+                <p>Pokemon not found </p>
+
+
+                <button onClick={()=> navigate(`/pokedex/`)} className='backHome'> Back Home</button>
+            </div>
             )
         }
     
