@@ -269,7 +269,7 @@ const CarsdPokemon = ({pokemonUrl}) => {
                                     <p>type</p>
                     
                                     <section className='section-stats'>
-                                            <p style={styleColor}><span>hP</span> <br />
+                                            <p style={styleColor}><span>h.Power</span> <br />
                                                 {Pokemon.stats?.[0].base_stat}
                                             </p>
                                             
