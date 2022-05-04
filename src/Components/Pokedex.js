@@ -1,11 +1,10 @@
-import React from 'react';
-import { useEffect } from 'react';
+import {React, useEffect , useState} from 'react';
 import axios from 'axios';
-import { useState } from 'react';
-import {useSelector, useDispatch} from 'react-redux'
-import CarsdPokemon from './CarsdPokemon';
+import {useSelector, useDispatch, } from 'react-redux'
 import {useNavigate} from 'react-router-dom'
 
+
+import CarsdPokemon from './CarsdPokemon';
 import elipse from '../img/Ellipsetop.png'
 import elipse2 from '../img/Ellipse2.png'
 
@@ -196,7 +195,7 @@ const Pokedex = () => {
     return (
         <>
         
-                <section className='top'>
+            <section className='top'>
                     <div className='red-top'></div>
 
                     <div className='black'></div>
@@ -212,12 +211,13 @@ const Pokedex = () => {
                     </div>
 
                     
-                </section>
-                    <section className='container-img-top'>
+            </section>
+
+            <section className='container-img-top'>
                         <img className="logo"  src={podedeximg} alt="Pokemon"></img>
                     </section>
         
-                <section className='containerPokedex'>
+            <section className='containerPokedex'>
 
                 <button className='btnMod' onClick={()=>dispatch({type: "SET_ISDARK"})}>
                     <img src={isDark? whitemod : darkmod} alt="" />

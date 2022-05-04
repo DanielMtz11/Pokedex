@@ -7,7 +7,6 @@ import './App.css';
 import Login from './Components/Login';
 import Pokedex from './Components/Pokedex';
 import PokedexData from './Components/PokedexData';
-// import PokedexInfo from './Components/PokedexInfo';
 import ProtectedRoutes from './Components/ProtectedRoutes';
 import {useSelector} from 'react-redux'
 
@@ -23,7 +22,6 @@ function App() {
       background: isDark? ("#241d1d"):("whitesmoke")
   }
 
-  // console.log(isDark)
   return (
 
     <HashRouter>
