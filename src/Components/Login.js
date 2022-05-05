@@ -8,9 +8,9 @@ import {useNavigate} from 'react-router-dom';
 
 import Footer from './Footer';
 
-import podedeximg from '../img/pokedex.png';
-import loginImg from '../img/loginImg.png';
-import loginImg338px from'../img/loginImg338px.png';
+import podedeximg from '../Assets/img/pokedex.png';
+import loginImg from '../Assets/img/loginImg.png';
+import loginImg338px from'../Assets/img/loginImg338px.png';
 
 
 const Login = () => {

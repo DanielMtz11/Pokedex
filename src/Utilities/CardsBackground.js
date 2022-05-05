@@ -1,6 +1,5 @@
 
 const CardsBackground = (type) => {
-    // export const backgroundAccordingToType = pokemonType => {
         switch(type){
             case'normal':
             return "linear-gradient(212deg, rgba(27,10,9,0.6867121848739496) 10%, rgba(255,239,147,1) 99%)"
@@ -43,9 +42,7 @@ const CardsBackground = (type) => {
             default:
             return "linear-gradient(177.03deg, #030706 -11.97%, #0D1211 57.49%, #5A5E5D 135.64%)"
             }
-    // };
-
-  
+    
 };
 
 export default CardsBackground;

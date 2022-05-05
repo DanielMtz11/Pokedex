@@ -9,21 +9,17 @@ import {useSelector, useDispatch, } from 'react-redux';
 //useNavigate es un hook de react-router-dom que sirve para navegar entre las paginas ya sea a la siguiente o a la anterior.
 import {useNavigate} from 'react-router-dom';
 
+import CardsPokemon from './CardsPokemon';
 
-import CarsdPokemon from './CarsdPokemon';
+import elipse from '../Assets/img/Ellipsetop.png';
+import elipse2 from '../Assets/img/Ellipse2.png';
 
-import elipse from '../img/Ellipsetop.png';
-import elipse2 from '../img/Ellipse2.png';
-
-import podedeximg from '../img/pokedex.png';
-import darkmod from '../img/darkmod.png';
-import whitemod from '../img/whitemod.png';
-import search from '../img/search-icon.png';
-import next from '../img/next.png';
-import back from '../img/back.png';
-
-
-
+import podedeximg from '../Assets/img/pokedex.png';
+import darkmod from '../Assets/img/darkmod.png';
+import whitemod from '../Assets/img/whitemod.png';
+import search from '../Assets/img/search-icon.png';
+import next from '../Assets/img/next.png';
+import back from '../Assets/img/back.png';
 
 
 const Pokedex = () => {
@@ -251,14 +247,17 @@ const Pokedex = () => {
                         //realizamos un map a la paginacion
                         pagination?.map(pokemon =>(
                         // la key depende de si el pokemon fue buscado o seleccionado,  de igual manera pokemonUrl.
-                        <CarsdPokemon key={pokemon.url?pokemon.url:pokemon.pokemon.url} pokemonUrl={pokemon.url?pokemon.url:pokemon.pokemon.url}  />             
+                        <CardsPokemon key={pokemon.url?pokemon.url:pokemon.pokemon.url} pokemonUrl={pokemon.url?pokemon.url:pokemon.pokemon.url}  />             
                         ))
                     }
                 </ul>
 
                 <section className='ContainerPokedex__pagination'>
+
+                        {/* "boton menos" para cambiar de iteracion */}
                         <button style={{  background: isDark? "#964131": "#DD1A1A"}} onClick={()=>{
                                                 setIteration(iteration-1)}}
+                                                //si nos encontramos en la primer iteracion desabilitamos el boton.                 
                                                 disabled={ iteration<=1}>
                                 «
                         </button>
@@ -266,6 +265,7 @@ const Pokedex = () => {
                         <div>
                             {   
                             showPage.map( num =>(
+                                // si num es igual numero de pagina "Number" le ponemos un background diferente dependiendo del estado de isDark
                             <button style={{background : num===Number?(isDark? ("#964131"):( "#DD1A1A")): ("rgb(44, 42, 42)") }} onClick={()=>{
                                                     dispatch({type: "SET_PAGE",
                                                                 payload: num})
@@ -279,8 +279,10 @@ const Pokedex = () => {
                             ))
                                 }
                         </div>
-                                
+                        
+                        {/* "boton mas" para cambiar de iteracion */}
                         <button style={{  background: isDark? "#964131": "#DD1A1A"}} onClick={()=> setIteration(iteration+1)}
+                                //si nos encontramos en la ultima iteracion desabilitamos el boton.                 
                                 disabled ={iteration >=totalShowPage }>
                                 »
                         </button>

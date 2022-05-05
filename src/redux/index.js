@@ -9,6 +9,8 @@ const INITIAL_STATE = {
 }
 
 const reducer = (state = INITIAL_STATE, action) => {
+
+    // el switch contiene las acciones que seran despachadas dentro de los componentes
 	switch(action.type){
 
         case "GET_USERNAME":
@@ -63,19 +65,15 @@ const reducer = (state = INITIAL_STATE, action) => {
                 page :1
             }
         
-        
-
         case "RESET_NUM":
             return{
                 ...state,
                 Number :1
             }
 
-    
-
-    default:
-	    return state;
-    }
+        default:
+            return state;
+        }
 }
 
 export default reducer;
