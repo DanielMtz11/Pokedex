@@ -193,55 +193,52 @@ const Pokedex = () => {
 
 
     return (
-        <>
-        
-            <section className='top'>
-                    <div className='red-top'></div>
+        <>        
+            <section className='Top'>
+                    <div className='Top__color'></div>
 
-                    <div className='black'></div>
+                    <div className='Top__color--black'></div>
 
 
-                    <div  className='elipse-top'>
+                    <div  className='Top__elipse'>
                         <img src={elipse} alt="" />
                     </div>
                     
 
-                    <div  className='elipse2-top'>
+                    <div  className='Top__elipse--small'>
                         <img src={elipse2} alt="" />
                     </div>
-
-                    
             </section>
 
-            <section className='container-img-top'>
-                        <img className="logo"  src={podedeximg} alt="Pokemon"></img>
-                    </section>
+            <section className='Top__logo'>
+                        <img  src={podedeximg} alt="Pokemon"></img>
+            </section>
         
-            <section className='containerPokedex'>
+            <section className='ContainerPokedex'>
 
-                <button className='btnMod' onClick={()=>dispatch({type: "SET_ISDARK"})}>
+                <button className='ContainerPokedex__btnIsDark' onClick={()=>dispatch({type: "SET_ISDARK"})}>
                     <img src={isDark? whitemod : darkmod} alt="" />
                 </button>
 
-                <p className='welcome' style={{color: isDark? "whitesmoke": "black"} } > <span style={{color: isDark? "#ea6565": "#DD1A1A"}}>welcome {userName}</span> here you can find your favorite pokemon </p>
+                <p className='ContainerPokedex__welcome' style={{color: isDark? "whitesmoke": "black"} } > <span style={{color: isDark? "#ea6565": "#DD1A1A"}}>welcome {userName}</span> here you can find your favorite pokemon </p>
 
-                <section className='inputs'> 
+                <section className='ContainerPokedex__inputs'> 
 
                 <form onSubmit={Submit}>
                     {/* <label htmlFor="id/name">Look for Name/Id</label> */}
-                    <input className='inputPokemon'
+                    <input className='ContainerPokedex__inputPokemon'
                             type="text"  id="id/name"
                             onChange={e => setNameOrId(e.target.value)}
                             value={NameOrId}
                             placeholder="pokemon name/id"
                             required
                             />
-                    <button className='btnSearch' >
+                    <button className='ContainerPokedex__btnSearch' >
                         <img src={search} alt="" />
                     </button>
                 </form >
 
-                <div className='select'>
+                <div className='ContainerPokedex__select'>
                     <select  onChange={handleSelect} name="" id="">
 
                         <option selected="selected" disabled >All Pokemons</option>
@@ -258,8 +255,7 @@ const Pokedex = () => {
                 </div>
                 </section>
 
-
-                    <section className='sectionBtns'>
+                <section className='ContainerPokedex__BtnsPagination'>
                             
                         <button onClick={()=>{ dispatch({type: "SET_PAGE-1"})
                                                 dispatch({type: "SET_NUM-1"})}}
@@ -278,27 +274,21 @@ const Pokedex = () => {
                                 <img src={next} alt="" />
                         </button>
 
-                    </section>
+                </section>
 
-                    <ul className='containerCard'>
-
-                {
-
-
+                <ul className='ContainerPokedex__cards'>
+                    {
+                        
+                        pagination?.map(pokemon =>(
+                            
+                        <CarsdPokemon key={pokemon.url?pokemon.url:pokemon.pokemon.url} pokemonUrl={pokemon.url?pokemon.url:pokemon.pokemon.url}  />
+                            
                     
-                    pagination?.map(pokemon =>(
-                        
-                    <CarsdPokemon key={pokemon.url?pokemon.url:pokemon.pokemon.url} pokemonUrl={pokemon.url?pokemon.url:pokemon.pokemon.url}  />
-                        
-                
-                    ))
-                }
+                        ))
+                    }
+                </ul>
 
-                        </ul>
-
-
-
-                    <section className='sectionPagination'>
+                <section className='ContainerPokedex__pagination'>
 
                         <button style={{  background: isDark? "#964131": "#DD1A1A"}} onClick={()=>{
                                                 setIteration(iteration-1)}}
@@ -332,10 +322,10 @@ const Pokedex = () => {
                                 »
                         </button>
                     
-                    </section>
+                
+                
                 </section>
-
-
+            </section>
         </>
     );
 };
