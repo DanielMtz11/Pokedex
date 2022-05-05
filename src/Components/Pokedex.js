@@ -27,7 +27,6 @@ const Pokedex = () => {
     const [iteration, setIteration] = useState(1);
 
     const [isLoading, setIsLoading]= useState(true);
-    // const[Number, setNumber] = useState(1);
 
     
     //para navegar a podexData
@@ -35,7 +34,6 @@ const Pokedex = () => {
 
 
     const[NameOrId, setNameOrId] = useState("");
-    // console.log(Pokemons)
 
     //*Desde la store...
     
@@ -184,7 +182,7 @@ const Pokedex = () => {
 
     if(isLoading){
         return(
-            <div className='container-loading' style={{background: isDark? "#241d1d": "linear-gradient(180deg, rgba(191,191,191,1) 0%, rgba(80,78,78,1) 99%)", color:isDark? "whitesmoke":"dark"}}>
+            <div className='Loading' style={{background: isDark? "#241d1d": "linear-gradient(180deg, rgba(191,191,191,1) 0%, rgba(80,78,78,1) 99%)", color:isDark? "whitesmoke":"dark"}}>
 
             <p>Loading...</p>
             </div>

@@ -2,12 +2,10 @@ import React from 'react';
 import { useState } from 'react';
 import {useSelector,useDispatch} from 'react-redux';
 import {useNavigate} from 'react-router-dom';
-import elipse from '../img/Ellipse.png'
-import elipse2 from '../img/Ellipse2.png'
 import podedeximg from '../img/pokedex.png'
-// import pokeball from '../img/pokeball.png'
 import loginImg from '../img/loginImg.png'
 import loginImg338px from'../img/loginImg338px.png'
+import Footer from './Footer';
 
 
 const Login = () => {
@@ -19,7 +17,6 @@ const Login = () => {
     const isDark = useSelector(state => state.isDark);
 
     const size = window.screen.width;
-    // console.log(size);
 
 
     const submit =(e)=>{
@@ -63,12 +60,8 @@ const Login = () => {
                 </section>
 
 
-            <section className='footer '>
-                    <div className='footer__color'></div>
+                <Footer/>
 
-                    <div className='footer__color--black'></div>
-
-            </section>
 
 
         </div>

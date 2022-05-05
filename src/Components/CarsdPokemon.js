@@ -236,32 +236,29 @@ const CarsdPokemon = ({pokemonUrl}) => {
                     
                     <Link to ={`/Pokedex/${Pokemon.name}`} >
                     
-                    <section className='container-card' style={style} >
-                    <div className='cardPokemon' style={style} >
+                    <section className='Card ' style={style} >
+                    <div className='Card__pokemon ' style={style} >
 
-                        <div className='card-fond'>
+                        <div className='Card__background'></div>
 
-                        </div>
-
-                        <div className='card-content'>
-                                    <img className='Pokedex-img' src={Pokemon?.sprites?.other?.home.front_default} alt="" />
+                        <div className='Card__content'>
+                                    <img src={Pokemon?.sprites?.other?.home.front_default} alt="" />
 
                     
                                     <h2 style={styleColor} className='name'>{Pokemon.name}</h2>
                                     
-                                    <ul className='types-ul'>
+                                    <ul className='Card__types'>
                                             
                                         {Pokemon.types?.map(type =>(
                                             
                                             <li key={type.type?.url}>{type.type?.name}  </li>
                                             
                                             ))}
-                                            {/* types */}
                                         
                                     </ul>
                                     <p>type</p>
                     
-                                    <section className='section-stats'>
+                                    <section className='Card__stats'>
                                             <p style={styleColor}><span>h.Power</span> <br />
                                                 {Pokemon.stats?.[0].base_stat}
                                             </p>

@@ -4,8 +4,7 @@ const INITIAL_STATE = {
     userName: "",
     isDark : false,
     page : 1,
-    Number :1
-
+    Number :1,
 
 }
 
@@ -71,6 +70,8 @@ const reducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 Number :1
             }
+
+    
 
     default:
 	    return state;
