@@ -1,12 +1,7 @@
 import { Navigate, Outlet } from 'react-router-dom';
-
-
 import { useSelector } from 'react-redux';
 
-
-
 const ProtectedRoutes = () => {
-
 
     const userName = useSelector(state => state.userName);
 		// Aquí va la condición. Puede ser una condición de cualquier tipo. Lo que 
@@ -16,8 +11,8 @@ const ProtectedRoutes = () => {
     } 
     
     else { 
-        return <Navigate to='/' />
-    }                     // Aquí le debemos decir la ruta a la que queremos llevar
-};                        // al usuario si no está autenticado
+        return <Navigate to='/' />// si no esta loggeado devolvemos a la ruta raiz, la cual es el componente Login
+    }                     
+};                       
 
 export default ProtectedRoutes;
