@@ -1,4 +1,3 @@
-import React from 'react';
 
 const CardsBackground = (type) => {
     // export const backgroundAccordingToType = pokemonType => {
